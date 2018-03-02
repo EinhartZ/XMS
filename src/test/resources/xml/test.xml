@@ -1,0 +1,6 @@
+<test>
+    <case>
+        <param>100</param>
+        <expected>mkyong</expected>
+    </case>
+</test>
