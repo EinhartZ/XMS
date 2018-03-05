@@ -13,13 +13,18 @@ public class QualityChapterDTO {
     private String name;
 
     private List<QualityChapterDTO> chapterDTOs = new ArrayList<>();
-    private List<QualityQuestionDTO> questionDTOList = new ArrayList<>();
+    private List<QualityQuestionDTO> questionDTOs = new ArrayList<>();
 
-    public QualityChapterDTO(String key, String name, List<QualityChapterDTO> chapterDTOs, List<QualityQuestionDTO> questionDTOList) {
+    public QualityChapterDTO(String key, String name) {
+        this.key = key;
+        this.name = name;
+    }
+
+    public QualityChapterDTO(String key, String name, List<QualityChapterDTO> chapterDTOs, List<QualityQuestionDTO> questionDTOs) {
         this.key = key;
         this.name = name;
         this.chapterDTOs = chapterDTOs;
-        this.questionDTOList = questionDTOList;
+        this.questionDTOs = questionDTOs;
     }
 
     public String getKey() {
@@ -34,7 +39,7 @@ public class QualityChapterDTO {
         return chapterDTOs;
     }
 
-    public List<QualityQuestionDTO> getQuestionDTOList() {
-        return questionDTOList;
+    public List<QualityQuestionDTO> getQuestionDTOs() {
+        return questionDTOs;
     }
 }

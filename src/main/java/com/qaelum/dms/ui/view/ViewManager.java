@@ -1,7 +1,6 @@
 package com.qaelum.dms.ui.view;
 
 import com.qaelum.dms.ui.view.coach.*;
-import com.qaelum.dms.ui.view.qbook.DmsTreeView;
 import com.qaelum.dms.ui.view.qbook.S3TreeView;
 import com.qaelum.dms.ui.view.qbook.WikiSub;
 
@@ -18,7 +17,7 @@ public class ViewManager {
 //    private DmsTreeView dmsTreeView;
     private S3TreeView s3TreeView;
 
-    private CoachAnswerView coachAnswerView;
+    private CoachChapterView coachChapterView;
     private CoachReportView coachReportView;
 
     private Map<String, WikiSub> wikiSubWindows;
@@ -34,7 +33,7 @@ public class ViewManager {
 //        dmsTreeView = new DmsTreeView(wikiSubWindows);
         s3TreeView = new S3TreeView(wikiSubWindows);
 
-        coachAnswerView = new CoachAnswerView();
+        coachChapterView = new CoachChapterView();
         coachReportView = new CoachReportView();
     }
 
@@ -50,8 +49,8 @@ public class ViewManager {
         return s3TreeView;
     }
 
-    public CoachAnswerView getCoachAnswerView() {
-        return coachAnswerView;
+    public CoachChapterView getCoachChapterView() {
+        return coachChapterView;
     }
 
     public CoachReportView getCoachReportView() {

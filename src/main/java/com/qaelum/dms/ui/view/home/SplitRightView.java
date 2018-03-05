@@ -1,11 +1,10 @@
 package com.qaelum.dms.ui.view.home;
 
-import com.qaelum.dms.ui.model.coach.CoachAnswerModel;
-import com.qaelum.dms.ui.presenter.coach.CoachAnswerPresenter;
-import com.qaelum.dms.ui.presenter.coach.TreeAnswerPresenter;
+import com.qaelum.dms.ui.model.coach.CoachChapterModel;
+import com.qaelum.dms.ui.presenter.coach.CoachChapterPresenter;
+import com.qaelum.dms.ui.presenter.coach.TreeChapterPresenter;
 import com.qaelum.dms.ui.view.ViewManager;
 import com.qaelum.dms.ui.view.coach.*;
-import com.qaelum.dms.ui.view.qbook.DmsTreeView;
 import com.qaelum.dms.ui.view.qbook.S3TreeView;
 import com.vaadin.ui.Component;
 import com.vaadin.ui.TabSheet;
@@ -33,19 +32,19 @@ public class SplitRightView extends VerticalLayout {
 //        DmsTreeView dmsTreeView = viewManager.getDmsTreeView();
         S3TreeView s3TreeView = viewManager.getS3TreeView();
 
-        ICoachAnswerView answerView = viewManager.getCoachAnswerView();
+        ICoachChapterView chapterView = viewManager.getCoachChapterView();
         CoachReportView reportView = viewManager.getCoachReportView();
 
         //link CoachTree and CoachAnswer
-        TreeAnswerPresenter treeAnswerPresenter = new TreeAnswerPresenter(coachTreeView, answerView);
+        TreeChapterPresenter treeChapterPresenter = new TreeChapterPresenter(coachTreeView, chapterView);
 
-        CoachAnswerModel answerModel = new CoachAnswerModel();
-        CoachAnswerPresenter answerPresenter = new CoachAnswerPresenter(answerView, answerModel);
+        CoachChapterModel chapterModel = new CoachChapterModel();
+        CoachChapterPresenter chapterPresenter = new CoachChapterPresenter(chapterView, chapterModel);
 
 //        tabsheet.addTab(dmsTreeView, "KMS");
         tabsheet.addTab(s3TreeView, "KMS²3");
 
-        tabsheet.addTab((Component) answerView, "Answer");
+        tabsheet.addTab((Component) chapterView, "Chapter Details");
         tabsheet.addTab(reportView, "Report");
     }
 }

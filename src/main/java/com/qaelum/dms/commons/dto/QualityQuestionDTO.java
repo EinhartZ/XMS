@@ -11,16 +11,16 @@ public class QualityQuestionDTO {
     private String key;
     private String name;
 
-    private String description;
     private QualityQuestion.QuestionType questionType;
+    private String description;
     private String comment;
 
-    public QualityQuestionDTO(String key, String name, String description, QualityQuestion.QuestionType questionType, String comment) {
+    private String questionAnswer;
+
+    public QualityQuestionDTO(String key, String name, QualityQuestion.QuestionType questionType) {
         this.key = key;
         this.name = name;
-        this.description = description;
         this.questionType = questionType;
-        this.comment = comment;
     }
 
     public String getKey() {
@@ -31,15 +31,23 @@ public class QualityQuestionDTO {
         return name;
     }
 
-    public String getDescription() {
-        return description;
-    }
-
     public QualityQuestion.QuestionType getQuestionType() {
         return questionType;
     }
 
+    public String getDescription() {
+        return description;
+    }
+
     public String getComment() {
         return comment;
+    }
+
+    public String getQuestionAnswer() {
+        return questionAnswer;
+    }
+
+    public void setQuestionAnswer(String questionAnswer) {
+        this.questionAnswer = questionAnswer;
     }
 }
