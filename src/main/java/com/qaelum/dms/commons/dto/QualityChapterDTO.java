@@ -1,5 +1,8 @@
 package com.qaelum.dms.commons.dto;
 
+import org.apache.commons.lang3.builder.EqualsBuilder;
+import org.apache.commons.lang3.builder.HashCodeBuilder;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -41,5 +44,18 @@ public class QualityChapterDTO {
 
     public List<QualityQuestionDTO> getQuestionDTOs() {
         return questionDTOs;
+    }
+
+    @Override
+    public boolean equals(Object obj) {
+        if(obj == this) return true;
+        if(!(obj instanceof QualityChapterDTO)) return false;
+        QualityChapterDTO chapterDTO = (QualityChapterDTO) obj;
+        return new EqualsBuilder().append(key, chapterDTO.getKey()).isEquals();
+    }
+
+    @Override
+    public int hashCode() {
+        return new HashCodeBuilder().append(key).toHashCode();
     }
 }

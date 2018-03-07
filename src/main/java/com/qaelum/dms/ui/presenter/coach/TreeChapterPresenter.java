@@ -30,18 +30,34 @@ public class TreeChapterPresenter implements ICoachTreeView.CoachTreeViewListene
     @Override
     public void selectItem(AbstractQualityItem qualityItem) {
         //TODO pass down a DTO, process it in the MODEL, pass the result to answerView
-        answerView.updateLabel(qualityItem.getItemKey() + " : " + qualityItem.getItemName());
+
+
+        QualityChapter selectedChapter = null;
+        QualityQuestion selectedQuestion = null;
+
+        QualityChapterDTO selectedChapterDTO = null;
+        QualityQuestionDTO selectedQuestionDTO = null;
 
         if(qualityItem instanceof QualityChapter) {
-            QualityChapterDTO qualityChapterDTO = new QualityChapterDTO(qualityItem.getItemKey(), qualityItem.getItemName());
-            List<QualityQuestion> questionList = ((QualityChapter) qualityItem).getQuestions();
-            for (QualityQuestion qualityQuestion : questionList) {
-                qualityChapterDTO.getQuestionDTOs().add(new QualityQuestionDTO(qualityQuestion.getItemKey(), qualityQuestion.getItemName(), qualityQuestion.getQuestionType()));
-            }
-            answerView.updateChapterDTO(qualityChapterDTO);
-        } else {
+            selectedChapter = (QualityChapter) qualityItem;
+        } else if (qualityItem instanceof  QualityQuestion) {
+            selectedChapter = qualityItem.getItemParent();
 
+            selectedQuestion = (QualityQuestion) qualityItem;
+            selectedQuestionDTO = new QualityQuestionDTO(selectedQuestion.getItemKey(), selectedQuestion.getItemName(), selectedQuestion.getQuestionType());
+        } else {
+            //Exception
         }
+
+        selectedChapterDTO = new QualityChapterDTO(selectedChapter.getItemKey(), selectedChapter.getItemName());
+        List<QualityQuestion> questionList = selectedChapter.getQuestions();
+        for (QualityQuestion qualityQuestion : questionList) {
+            QualityQuestionDTO qualityQuestionDTO = new QualityQuestionDTO(qualityQuestion.getItemKey(), qualityQuestion.getItemName(), qualityQuestion.getQuestionType());
+            selectedChapterDTO.getQuestionDTOs().add(qualityQuestionDTO);
+        }
+
+        answerView.updateChapterDTO(selectedChapterDTO, selectedQuestionDTO);
+        answerView.updateLabel(selectedChapterDTO.getKey() + " : " + selectedChapterDTO.getName());
     }
 
     @Override
@@ -52,5 +68,15 @@ public class TreeChapterPresenter implements ICoachTreeView.CoachTreeViewListene
     @Override
     public void saveQuestion(QualityQuestionDTO questionDTO) {
         //NOP
+    }
+
+    @Override
+    public void saveAllQuestions(QualityChapterDTO chapterDTO) {
+        //NOP
+    }
+
+    @Override
+    public void selectQuestionView(String key) {
+        treeView.selectSiblingQuestion(key);
     }
 }

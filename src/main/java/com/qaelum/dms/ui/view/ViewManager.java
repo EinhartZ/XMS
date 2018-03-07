@@ -17,7 +17,7 @@ public class ViewManager {
 //    private DmsTreeView dmsTreeView;
     private S3TreeView s3TreeView;
 
-    private CoachChapterView coachChapterView;
+    private QualityChapterView coachChapterView;
     private CoachReportView coachReportView;
 
     private Map<String, WikiSub> wikiSubWindows;
@@ -33,7 +33,7 @@ public class ViewManager {
 //        dmsTreeView = new DmsTreeView(wikiSubWindows);
         s3TreeView = new S3TreeView(wikiSubWindows);
 
-        coachChapterView = new CoachChapterView();
+        coachChapterView = new QualityChapterView();
         coachReportView = new CoachReportView();
     }
 
@@ -49,7 +49,7 @@ public class ViewManager {
         return s3TreeView;
     }
 
-    public CoachChapterView getCoachChapterView() {
+    public QualityChapterView getCoachChapterView() {
         return coachChapterView;
     }
 

@@ -8,18 +8,19 @@ import com.qaelum.dms.commons.dto.QualityQuestionDTO;
  * © QAELUM NV
  */
 public interface ICoachChapterView {
-    void updateChapterDTO(QualityChapterDTO chapterDTO);
+    void updateChapterDTO(QualityChapterDTO chapterDTO, QualityQuestionDTO selectedQuestionDTO);
 
     void updateLabel(String value);
 
     void addListener(CoachChapterViewListener listener);
 
-    void saveQuestion(QualityQuestionDTO questionDTO);
     /**
      * Listener Interface
      */
     interface CoachChapterViewListener {
         void buttonClick(String value);
         void saveQuestion(QualityQuestionDTO questionDTO);
+        void saveAllQuestions(QualityChapterDTO chapterDTO);
+        void selectQuestionView(String key);
     }
 }

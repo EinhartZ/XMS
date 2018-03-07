@@ -9,6 +9,8 @@ import com.qaelum.dms.domain.entity.coach.qualityItem.AbstractQualityItem;
 public interface ICoachTreeView {
     void updateTree();
 
+    void selectSiblingQuestion(String key);
+
     void addListener(CoachTreeViewListener listener);
 
     interface CoachTreeViewListener {

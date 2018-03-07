@@ -3,6 +3,8 @@ package com.qaelum.dms.ui.view.coach;
 import com.qaelum.dms.domain.entity.coach.CoachProtocol;
 import com.qaelum.dms.domain.entity.coach.ProtocolScheme;
 import com.qaelum.dms.domain.entity.coach.qualityItem.AbstractQualityItem;
+import com.qaelum.dms.domain.entity.coach.qualityItem.QualityChapter;
+import com.qaelum.dms.domain.entity.coach.qualityItem.QualityQuestion;
 import com.vaadin.ui.Label;
 import com.vaadin.ui.TreeGrid;
 import com.vaadin.ui.VerticalLayout;
@@ -51,13 +53,36 @@ public class CoachTreeView extends VerticalLayout implements ICoachTreeView{
         treeGrid.addColumn(AbstractQualityItem::getItemName).setCaption("name");
 
         treeGrid.addItemClickListener(itemClick -> {
-           selectItem(itemClick.getItem());
+           clickItem(itemClick.getItem());
         });
     }
 
-    private void selectItem(AbstractQualityItem qualityItem) {
+    private void clickItem(AbstractQualityItem qualityItem) {
         for (CoachTreeViewListener listener : listeners) {
             listener.selectItem(qualityItem);
+        }
+    }
+
+    @Override
+    public void selectSiblingQuestion(String key) {
+        if(treeGrid.getSelectedItems().isEmpty()) return;
+        AbstractQualityItem selectedItem = treeGrid.getSelectedItems().iterator().next();
+        //TODO BAD CODE
+        QualityChapter parentChapter = null;
+        if(selectedItem instanceof QualityChapter) {
+            parentChapter = (QualityChapter) selectedItem;
+        } else if (selectedItem instanceof  QualityQuestion) {
+            parentChapter = selectedItem.getItemParent();
+        } else {
+            //NOP
+        }
+
+        List<QualityQuestion> siblingQuestions = parentChapter.getQuestions();
+
+        for(QualityQuestion siblingQuestion : siblingQuestions) {
+            if (siblingQuestion.getItemKey().equals(key)) {
+                treeGrid.select(siblingQuestion);
+            }
         }
     }
 

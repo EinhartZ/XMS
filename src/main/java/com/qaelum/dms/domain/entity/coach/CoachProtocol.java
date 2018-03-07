@@ -189,6 +189,7 @@ public class CoachProtocol {
             for(String questionKey : list) {
                 QualityQuestion qualityQuestion = questionDict.get(questionKey);
                 if(qualityQuestion != null) {
+                    qualityQuestion.setItemParent(qualityChapter);
                     qualityChapter.getQuestions().add(qualityQuestion);
                 } else {
                     System.out.println("No question found for " + questionKey);

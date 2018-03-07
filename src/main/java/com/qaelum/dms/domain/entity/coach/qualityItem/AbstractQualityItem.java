@@ -11,6 +11,8 @@ public abstract class AbstractQualityItem {
     protected String itemName;
     List<AbstractQualityItem> itemChildren;
 
+    protected QualityChapter itemParent;
+
     protected AbstractQualityItem(String itemKey, String itemName) {
         this.itemKey = itemKey;
         this.itemName = itemName;
@@ -27,5 +29,13 @@ public abstract class AbstractQualityItem {
 
     public List<AbstractQualityItem> getItemChildren() {
         return itemChildren;
+    }
+
+    public void setItemParent(QualityChapter itemParent) {
+        this.itemParent = itemParent;
+    }
+
+    public QualityChapter getItemParent() {
+        return itemParent;
     }
 }
