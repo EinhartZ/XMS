@@ -1,7 +1,13 @@
 package com.qaelum.dms.ui.view;
 
+import com.qaelum.dms.ui.model.coach.CoachChapterModel;
+import com.qaelum.dms.ui.presenter.TreesPresenter;
+import com.qaelum.dms.ui.presenter.coach.CoachChapterPresenter;
+import com.qaelum.dms.ui.presenter.coach.TreeChapterPresenter;
 import com.qaelum.dms.ui.view.coach.*;
+import com.qaelum.dms.ui.view.qbook.IDmsTreeView;
 import com.qaelum.dms.ui.view.qbook.S3TreeView;
+import com.qaelum.dms.ui.view.qbook.TestTreeView;
 import com.qaelum.dms.ui.view.qbook.WikiSub;
 
 import java.util.HashMap;
@@ -16,6 +22,7 @@ public class ViewManager {
 
 //    private DmsTreeView dmsTreeView;
     private S3TreeView s3TreeView;
+    private TestTreeView testTreeView;
 
     private QualityChapterView coachChapterView;
     private CoachReportView coachReportView;
@@ -27,6 +34,8 @@ public class ViewManager {
     }
 
     private void initAllViews() {
+        testTreeView = new TestTreeView();
+
         coachTreeView = new CoachTreeView();
 
         wikiSubWindows = new HashMap<>();
@@ -35,6 +44,16 @@ public class ViewManager {
 
         coachChapterView = new QualityChapterView();
         coachReportView = new CoachReportView();
+
+        //link CoachTree and CoachAnswer
+        TreeChapterPresenter treeChapterPresenter = new TreeChapterPresenter(coachTreeView, coachChapterView);
+
+        //link ChapterView to ChapterModel
+        CoachChapterModel chapterModel = new CoachChapterModel();
+        CoachChapterPresenter chapterPresenter = new CoachChapterPresenter(coachChapterView, chapterModel);
+
+        //link DMSTree to
+        TreesPresenter treesPresenter = new TreesPresenter(s3TreeView, coachTreeView);
     }
 
     public CoachTreeView getCoachTreeView() {
@@ -57,4 +76,7 @@ public class ViewManager {
         return coachReportView;
     }
 
+    public TestTreeView getTestTreeView() {
+        return testTreeView;
+    }
 }

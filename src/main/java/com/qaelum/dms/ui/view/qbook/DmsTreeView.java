@@ -63,7 +63,7 @@ public class DmsTreeView extends VerticalLayout {
         tree.expand("Earth"); // Expand programmatically
 
         tree.addItemClickListener(itemClick -> {
-            //openWikiPopup(itemClick.getItem());
+            //openWikiPopup(itemClick.getSelectedItem());
         });
 
 

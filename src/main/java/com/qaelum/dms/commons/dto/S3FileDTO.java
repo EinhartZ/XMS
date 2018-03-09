@@ -1,8 +1,8 @@
 package com.qaelum.dms.commons.dto;
 
 import org.apache.commons.io.FilenameUtils;
-
 import java.io.File;
+import java.util.Objects;
 
 /**
  * Created by Einhart on 2/28/2018.
@@ -48,6 +48,11 @@ public class S3FileDTO implements IDmsFileDTO {
         if(!(obj instanceof S3FileDTO)) return false;
 
         S3FileDTO s3FileDTO = (S3FileDTO) obj;
-        return this.filePath.equals(s3FileDTO.getFilePath());
+        return Objects.equals(filePath, s3FileDTO.getFilePath());
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hashCode(filePath);
     }
 }

@@ -87,6 +87,15 @@ public class CoachTreeView extends VerticalLayout implements ICoachTreeView{
     }
 
     @Override
+    public String getSelectedItem() {
+        if(treeGrid.getSelectedItems().isEmpty()) {
+            return " X ";
+        } else {
+            return treeGrid.getSelectedItems().iterator().next().getItemKey();
+        }
+    }
+
+    @Override
     public void updateTree() {
 
     }
