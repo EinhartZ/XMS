@@ -6,7 +6,6 @@ import com.amazonaws.services.s3.AmazonS3;
 import com.amazonaws.services.s3.AmazonS3ClientBuilder;
 import com.amazonaws.services.s3.model.*;
 import com.amazonaws.util.IOUtils;
-import com.qaelum.dms.commons.dto.DmsFileDTO;
 import com.qaelum.dms.commons.dto.S3FileDTO;
 
 import java.io.*;
@@ -37,15 +36,17 @@ public class S3DAO implements IDmsFileDAO{
 
     @Override
     public boolean hasChildren(String schema, S3FileDTO s3FileDTO) {
-        String path = s3FileDTO.getFilePath();
+        return hasChildren(s3FileDTO.getFilePath());
+    }
 
-        ListObjectsV2Request request = new ListObjectsV2Request().withBucketName(BUCKET_NAME).withPrefix(path).withDelimiter(DELIMITER);
+    private boolean hasChildren(String filePath) {
+        ListObjectsV2Request request = new ListObjectsV2Request().withBucketName(BUCKET_NAME).withPrefix(filePath).withDelimiter(DELIMITER);
         ListObjectsV2Result result = s3.listObjectsV2(request);
         List<String> folders = result.getCommonPrefixes();
         List<S3ObjectSummary> files = result.getObjectSummaries();
 
         for(S3ObjectSummary file: files) {
-            if(!file.getKey().equals(path)) {
+            if(!file.getKey().equals(filePath)) {
                 return true;
             }
         }
@@ -59,17 +60,19 @@ public class S3DAO implements IDmsFileDAO{
 
     @Override
     public Collection<S3FileDTO> findChildrenFiles(String schema, S3FileDTO s3FileDTO) {
-        String path = s3FileDTO.getFilePath();
+        return findChildren(s3FileDTO.getFilePath());
+    }
 
+    private  Collection<S3FileDTO> findChildren(String filePath) {
         Collection<S3FileDTO> children = new ArrayList<>();
 
-        ListObjectsV2Request request = new ListObjectsV2Request().withBucketName(BUCKET_NAME).withPrefix(path).withDelimiter(DELIMITER);
+        ListObjectsV2Request request = new ListObjectsV2Request().withBucketName(BUCKET_NAME).withPrefix(filePath).withDelimiter(DELIMITER);
         ListObjectsV2Result result = s3.listObjectsV2(request);
         List<String> folders = result.getCommonPrefixes();
         List<S3ObjectSummary> files = result.getObjectSummaries();
 
         for(S3ObjectSummary file: files) {
-            if(!file.getKey().equals(path)) {
+            if(!file.getKey().equals(filePath)) {
                 S3FileDTO childFile = new S3FileDTO(file.getKey());
                 children.add(childFile);
             }
@@ -153,6 +156,47 @@ public class S3DAO implements IDmsFileDAO{
         } catch (IOException e) {
             e.printStackTrace();
         }
+    }
 
+    @Override
+    public void addFolder(String filePath) {
+        createFolder(BUCKET_NAME, filePath, s3);
+    }
+
+    private void createFolder(String bucketName, String folderName, AmazonS3 client) {
+        // create meta-data for your folder and set content-length to 0
+        ObjectMetadata metadata = new ObjectMetadata();
+        metadata.setContentLength(0);
+        // create empty content
+        InputStream emptyContent = new ByteArrayInputStream(new byte[0]);
+        // create a PutObjectRequest passing the folder name suffixed by /
+        PutObjectRequest putObjectRequest = new PutObjectRequest(bucketName,
+                folderName, emptyContent, metadata);
+        // send request to S3 to create folder
+        client.putObject(putObjectRequest);
+    }
+
+    @Override
+    public void removeFolder(String filePath) {
+
+    }
+
+    @Override
+    public void removeFile(String filePath) {
+        s3.deleteObject(BUCKET_NAME, filePath);
+    }
+
+    @Override
+    public void removeFolderRecursive(S3FileDTO s3fileDTO) {
+        removeFolderRecursive(s3fileDTO.getFilePath());
+    }
+
+    @Override
+    public void removeFolderRecursive(String filePath) {
+        for(S3FileDTO childFile : findChildren(filePath)) {
+           removeFolderRecursive(childFile.getFilePath());
+        }
+
+        removeFile(filePath);
     }
 }

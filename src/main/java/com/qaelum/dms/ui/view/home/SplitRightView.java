@@ -23,7 +23,7 @@ public class SplitRightView extends VerticalLayout {
 
     private Button btn_1 = new Button(VaadinIcons.FILE_TREE);
     private Button btn_2 = new Button(VaadinIcons.ACCORDION_MENU);
-    private Button btn_3 = new Button(VaadinIcons.DIPLOMA);
+    private Button btn_3 = new Button(VaadinIcons.DIPLOMA_SCROLL);
     private Button btn_4 = new Button(VaadinIcons.HAMMER);
 
     public SplitRightView(ViewManager viewManager) {

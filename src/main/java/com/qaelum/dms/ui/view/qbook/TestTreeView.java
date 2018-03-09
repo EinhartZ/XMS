@@ -1,7 +1,12 @@
 package com.qaelum.dms.ui.view.qbook;
 
+import com.vaadin.contextmenu.ContextMenu;
+import com.vaadin.contextmenu.GridContextMenu;
+import com.vaadin.contextmenu.Menu;
+import com.vaadin.contextmenu.MenuItem;
 import com.vaadin.data.TreeData;
 import com.vaadin.data.provider.TreeDataProvider;
+import com.vaadin.ui.Notification;
 import com.vaadin.ui.Tree;
 import com.vaadin.ui.VerticalLayout;
 
@@ -11,9 +16,11 @@ import com.vaadin.ui.VerticalLayout;
  */
 public class TestTreeView extends VerticalLayout implements IDmsTreeView{
 
+    Tree<String> tree = new Tree<>();
+
     public TestTreeView() {
         // An initial planet tree
-        Tree<String> tree = new Tree<>();
+
         TreeData<String> treeData = new TreeData<>();
 
 // Couple of childless root items
@@ -34,7 +41,43 @@ public class TestTreeView extends VerticalLayout implements IDmsTreeView{
         treeData.addItem("Mars", "Deimos");
         inMemoryDataProvider.refreshAll();
 
+        ContextMenu contextMenu = new ContextMenu(this, true);
+        fillMenu(contextMenu);
+
+        contextMenu.setAsContextMenuOf(tree);
+        contextMenu.addContextMenuOpenListener(new ContextMenu.ContextMenuOpenListener() {
+            @Override
+            public void onContextMenuOpen(ContextMenuOpenEvent event) {
+                String item = ((Tree.TreeContextClickEvent<String>)event.getContextClickEvent()).getItem();
+                tree.select(item);
+                Notification.show(item);
+            }
+        });
+
         addComponent(tree);
+    }
+
+    private void fillMenu(Menu menu) {
+        final MenuItem itemPrint = menu.addItem("Print", e -> {
+            if (tree.getSelectedItems().isEmpty()) {
+                System.out.println("Nothing selected");
+            } else {
+                System.out.println("Printing..." + tree.getSelectedItems().iterator().next());
+            }
+        });
+
+        // Checkable item
+        final MenuItem item = menu.addItem("Checkable", e -> {
+            Notification.show("checked: " + e.isChecked());
+        });
+        item.setCheckable(true);
+        item.setChecked(true);
+
+// Disabled item
+        MenuItem item2 = menu.addItem("Disabled", e -> {
+            Notification.show("disabled");
+        });
+        item2.setEnabled(false);
     }
 
     @Override

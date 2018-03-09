@@ -1,54 +1,53 @@
-package com.qaelum.dms.ui.presenter;
+package com.qaelum.dms.ui.presenter.qbook;
 
 import com.qaelum.dms.commons.dto.S3FileDTO;
-import com.qaelum.dms.ui.view.coach.ICoachTreeView;
+import com.qaelum.dms.domain.dao.IDmsFileDAO;
 import com.qaelum.dms.ui.view.qbook.IDmsTreeView;
 
 import java.util.List;
 
 /**
- * Created by Einhart on 3/7/2018.
+ * Created by Einhart on 3/9/2018.
  * © QAELUM NV
  */
-public class TreesPresenter implements IDmsTreeView.DmsTreeViewListener {
-
+public class DmsTreePresenter implements IDmsTreeView.DmsTreeViewListener {
     private IDmsTreeView dmsTreeView;
-    private ICoachTreeView coachTreeView;
+    private IDmsFileDAO dmsFileDAO;
 
-    public TreesPresenter(IDmsTreeView dmsTreeView, ICoachTreeView coachTreeView) {
+    public DmsTreePresenter(IDmsTreeView dmsTreeView, IDmsFileDAO dmsFileDAO) {
         this.dmsTreeView = dmsTreeView;
-        this.coachTreeView = coachTreeView;
+        this.dmsFileDAO = dmsFileDAO;
 
         dmsTreeView.addListener(this);
     }
 
     @Override
     public void attachProof(String docKey) {
-        System.out.println("Attach Proof " + docKey + " to " + coachTreeView.getSelectedItem());
+        //NOP
     }
 
     @Override
     public void attachProof(List<String> docKeysList) {
-
+        //NOP
     }
 
     @Override
     public void addFolder(String filePath) {
-        //NOP
+        dmsFileDAO.addFolder(filePath);
     }
 
     @Override
     public void removeFolder(String filePath) {
-        //NOP
+        dmsFileDAO.removeFolder(filePath);
     }
 
     @Override
     public void removeFile(String filePath) {
-        //NOP
+        dmsFileDAO.removeFile(filePath);
     }
 
     @Override
     public void removeFolderRecursive(S3FileDTO s3fileDTO) {
-        //NOP
+        dmsFileDAO.removeFolderRecursive(s3fileDTO);
     }
 }

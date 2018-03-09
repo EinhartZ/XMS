@@ -1,6 +1,5 @@
 package com.qaelum.dms.domain.dao;
 
-import com.qaelum.dms.commons.dto.DmsFileDTO;
 import com.qaelum.dms.commons.dto.S3FileDTO;
 
 import java.io.IOException;
@@ -23,4 +22,14 @@ public interface IDmsFileDAO {
     String readWikiContent(String schema, String key_name);
 
     void writeWikiContent(String schema, S3FileDTO s3FileDTO, String content);
+
+    void addFolder(String filePath);
+
+    void removeFolder(String filePath);
+
+    void removeFile(String filePath);
+
+    void removeFolderRecursive(S3FileDTO s3fileDTO);
+
+    void removeFolderRecursive(String filePath);
 }

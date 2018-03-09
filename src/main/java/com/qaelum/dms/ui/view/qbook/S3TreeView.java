@@ -7,6 +7,10 @@ import com.amazonaws.services.s3.model.S3ObjectSummary;
 import com.qaelum.dms.commons.dto.S3FileDTO;
 import com.qaelum.dms.domain.dao.S3DAO;
 import com.qaelum.dms.ui.model.qbook.S3TreeDataProvider;
+import com.qaelum.dms.ui.presenter.qbook.DmsTreePresenter;
+import com.vaadin.contextmenu.ContextMenu;
+import com.vaadin.contextmenu.Menu;
+import com.vaadin.contextmenu.MenuItem;
 import com.vaadin.icons.VaadinIcons;
 import com.vaadin.server.Page;
 import com.vaadin.ui.*;
@@ -20,80 +24,28 @@ import java.util.Map;
  * © QAELUM NV
  */
 public class S3TreeView extends VerticalLayout implements IDmsTreeView{
-    private String title = "Amazon S3";
-
     Tree<S3FileDTO> s3Tree;
-//    TreeGrid<S3FileDTO> s3TreeGrid;
 
     private Map<String, WikiSub> wikiSubWindows;
     private int maxSubWindows = 2;
 
-    private HorizontalLayout controlHl = new HorizontalLayout();
-
     private List<DmsTreeViewListener> listeners = new ArrayList<>();
 
     public S3TreeView(Map<String, WikiSub> wikiSubWindows) {
-        addComponent(new Label(title));
-
         initTree();
-        initControlHl();
 
-        addComponent(controlHl);
         addComponent(s3Tree);
-//        addComponent(s3TreeGrid);
 
         this.wikiSubWindows = wikiSubWindows;
     }
 
-    private void initControlHl() {
-        Button btnOpen = new Button(VaadinIcons.EYE);
-        btnOpen.addClickListener(clickEvent -> {
-            if(s3Tree.getSelectedItems().isEmpty()) {
-                return;
-            } else {
-                openWikiPopup(s3Tree.getSelectedItems().iterator().next());
-            }
-        });
-
-        Button btnFileAdd = new Button(VaadinIcons.FILE_ADD);
-        Button btnFileRemove = new Button(VaadinIcons.FILE_REMOVE);
-
-        Button btnFolderAdd = new Button(VaadinIcons.FOLDER_ADD);
-        Button btnFolderRemove = new Button(VaadinIcons.FOLDER_REMOVE);
-
-        Button btnAttach = new Button(VaadinIcons.PUZZLE_PIECE);
-        btnAttach.addClickListener(clickEvent -> {
-            S3FileDTO selectedFileDTO = null;
-            if(s3Tree.getSelectedItems().isEmpty()) {
-                return;
-            } else {
-                selectedFileDTO = s3Tree.getSelectedItems().iterator().next();
-            }
-
-            for (DmsTreeViewListener listener : listeners) {
-                listener.attachProof(selectedFileDTO.getFilePath());
-            }
-        });
-
-        controlHl.addComponent(btnOpen);
-        controlHl.addComponent(btnAttach);
-
-        Button btnTest = new Button(VaadinIcons.ABACUS);
-        btnTest.addClickListener(clickEvent -> {
-//            focusTreeSelection();
-        });
-        controlHl.addComponent(btnTest);
-    }
 
     private void initTree() {
         s3Tree = new Tree<>();
-//        s3TreeGrid = new TreeGrid<>();
 
         S3FileDTO s3Root = new S3FileDTO("user_0001/");
 
         s3Tree.setDataProvider(new S3TreeDataProvider(s3Root));
-//        s3TreeGrid.setDataProvider(new S3TreeDataProvider(s3Root));
-//        s3TreeGrid.addColumn(S3FileDTO::getFileName).setCaption("Name");
 
         s3Tree.setItemCaptionGenerator(item -> {
             return item.getFileName();
@@ -105,6 +57,8 @@ public class S3TreeView extends VerticalLayout implements IDmsTreeView{
             }
 
             switch (item.getExtension()) {
+                case "txt":
+                    return VaadinIcons.FILE_FONT;
                 case "xml":
                     return VaadinIcons.FILE_CODE;
                 case "pdf":
@@ -134,14 +88,79 @@ public class S3TreeView extends VerticalLayout implements IDmsTreeView{
             }
         });
 
-
+        /*
+        Adding right click functionality
+         */
+        ContextMenu contextMenu = new ContextMenu(s3Tree, true);
+        contextMenu.addContextMenuOpenListener(this::updateTreeContextMenu);
     }
 
-    public void focusTreeSelection() {
-        if (!s3Tree.getSelectedItems().isEmpty()) {
-            S3FileDTO selectedFileDTO = s3Tree.getSelectedItems().iterator().next();
-            s3Tree.select(selectedFileDTO);
-            s3Tree.expand(selectedFileDTO);
+    private void updateTreeContextMenu(ContextMenu.ContextMenuOpenListener.ContextMenuOpenEvent event) {
+        event.getContextMenu().removeItems();
+        S3FileDTO item = ((Tree.TreeContextClickEvent<S3FileDTO>)event.getContextClickEvent()).getItem();
+        if(item != null) {
+            s3Tree.select(item);
+
+            event.getContextMenu().addItem("View", VaadinIcons.EYE, menuItem -> {
+                openWikiPopup(item);
+            });
+            event.getContextMenu().addItem("Attach", VaadinIcons.PUZZLE_PIECE, menuItem -> {
+                for (DmsTreeViewListener listener : listeners) {
+                    listener.attachProof(item.getFilePath());
+                }
+            });
+
+
+            event.getContextMenu().addSeparator();
+            if(item.isFolder()) {
+                MenuItem addMenu = event.getContextMenu().addItem("New", VaadinIcons.NEWSPAPER, menuItem -> {
+
+                });
+
+                addMenu.addItem("Folder", VaadinIcons.FOLDER_ADD, menuItem -> {
+                    System.out.println("adding new folder...");
+                    for(DmsTreeViewListener listener : listeners) {
+                        listener.addFolder(item.getFilePath() + "Empty" + "/");
+                    }
+
+                    s3Tree.collapse(item);
+                    s3Tree.getDataProvider().refreshAll();
+                    s3Tree.expand(item);
+                });
+                addMenu.addItem("File", VaadinIcons.FILE_ADD, menuItem -> {
+                    System.out.println("adding new file...");
+                });
+            }
+
+            if(item.isFolder()) {
+                MenuItem remove = event.getContextMenu().addItem("Delete", VaadinIcons.FOLDER_REMOVE, menuItem -> {
+                    for (DmsTreeViewListener listener : listeners) {
+                        listener.removeFolderRecursive(item);
+                    }
+                    System.out.println("deleting folder...");
+
+                    s3Tree.getDataProvider().refreshAll();
+                });
+/*
+                if(s3Tree.getDataProvider().hasChildren(item)) {
+                    remove.setEnabled(false);
+                }
+*/
+            } else {
+                event.getContextMenu().addItem("Delete", VaadinIcons.FILE_REMOVE, menuItem -> {
+                    for (DmsTreeViewListener listener : listeners) {
+                        listener.removeFile(item.getFilePath());
+                    }
+                    System.out.println("deleting file...");
+
+                    s3Tree.getDataProvider().refreshAll();
+                });
+            }
+
+            event.getContextMenu().addSeparator();
+            event.getContextMenu().addItem("Info", VaadinIcons.INFO_CIRCLE_O, menuItem -> {
+                Notification.show(item.getFilePath());
+            });
         }
     }
 

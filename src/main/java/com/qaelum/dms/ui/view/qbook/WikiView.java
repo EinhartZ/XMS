@@ -1,6 +1,5 @@
 package com.qaelum.dms.ui.view.qbook;
 
-import com.qaelum.dms.commons.dto.DmsFileDTO;
 import com.qaelum.dms.commons.dto.S3FileDTO;
 import com.vaadin.ui.Button;
 import com.vaadin.ui.HorizontalLayout;

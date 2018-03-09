@@ -1,9 +1,12 @@
 package com.qaelum.dms.ui.view;
 
+import com.qaelum.dms.domain.dao.IDmsFileDAO;
+import com.qaelum.dms.domain.dao.S3DAO;
 import com.qaelum.dms.ui.model.coach.CoachChapterModel;
 import com.qaelum.dms.ui.presenter.TreesPresenter;
 import com.qaelum.dms.ui.presenter.coach.CoachChapterPresenter;
 import com.qaelum.dms.ui.presenter.coach.TreeChapterPresenter;
+import com.qaelum.dms.ui.presenter.qbook.DmsTreePresenter;
 import com.qaelum.dms.ui.view.coach.*;
 import com.qaelum.dms.ui.view.qbook.IDmsTreeView;
 import com.qaelum.dms.ui.view.qbook.S3TreeView;
@@ -54,6 +57,10 @@ public class ViewManager {
 
         //link DMSTree to
         TreesPresenter treesPresenter = new TreesPresenter(s3TreeView, coachTreeView);
+
+        //link DmsTree to Model
+        IDmsFileDAO dmsFileDAO = S3DAO.getInstance();
+        DmsTreePresenter dmsTreePresenter = new DmsTreePresenter(s3TreeView, dmsFileDAO);
     }
 
     public CoachTreeView getCoachTreeView() {
