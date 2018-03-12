@@ -1,7 +1,9 @@
 package com.qaelum.dms.ui.view.coach;
 
+import com.qaelum.dms.commons.dto.IDmsFileDTO;
 import com.qaelum.dms.commons.dto.QualityChapterDTO;
 import com.qaelum.dms.commons.dto.QualityQuestionDTO;
+import com.qaelum.dms.commons.dto.QuestionAnswerDTO;
 import com.vaadin.data.Binder;
 import com.vaadin.data.ValidationException;
 import com.vaadin.icons.VaadinIcons;
@@ -19,7 +21,6 @@ import java.util.Map;
 public class QualityChapterView extends VerticalLayout implements ICoachChapterView {
 
     private QualityChapterDTO chapterDTO;
-    private QualityQuestionDTO selectedQuestionDTO;
 
     private String title = "QualityChapterView";
 
@@ -40,14 +41,6 @@ public class QualityChapterView extends VerticalLayout implements ICoachChapterV
         addComponent(accQuestions);
     }
 
-    public void setChapterDTO(QualityChapterDTO chapterDTO) {
-        this.chapterDTO = chapterDTO;
-    }
-
-    public void setSelectedQuestionDTO(QualityQuestionDTO selectedQuestionDTO) {
-        this.selectedQuestionDTO = selectedQuestionDTO;
-    }
-
     private void initView() {
         btnSave.addClickListener(clickEvent -> {
            saveAllQuestions();
@@ -55,7 +48,10 @@ public class QualityChapterView extends VerticalLayout implements ICoachChapterV
 
         accQuestions.addSelectedTabChangeListener(selectedTabChangeEvent -> {
             for (CoachChapterViewListener listener : listeners) {
-                listener.selectQuestionView(((QualityQuestionView)selectedTabChangeEvent.getTabSheet().getSelectedTab()).getQuestionKey());
+                if (selectedTabChangeEvent.isUserOriginated()) {
+                    QualityQuestionDTO questionDTO = ((QualityQuestionView)selectedTabChangeEvent.getTabSheet().getSelectedTab()).getQuestionDTO();
+                    listener.selectQuestion(questionDTO);
+                }
             }
         });
     }
@@ -78,7 +74,7 @@ public class QualityChapterView extends VerticalLayout implements ICoachChapterV
         }
     }
 
-    public void focusSelectedQuestion() {
+    public void focusSelectedQuestion(QualityQuestionDTO selectedQuestionDTO) {
         if(selectedQuestionDTO == null) {
             return;
         }
@@ -109,19 +105,21 @@ public class QualityChapterView extends VerticalLayout implements ICoachChapterV
     @Override
     public void updateChapterDTO(QualityChapterDTO chapterDTO, QualityQuestionDTO selectedQuestionDTO) {
         if(!chapterDTO.equals(this.chapterDTO)) {
-            setChapterDTO(chapterDTO);
-            setSelectedQuestionDTO(selectedQuestionDTO);
+            this.chapterDTO = chapterDTO;
             refreshView();
-            focusSelectedQuestion();
-        } else {
-            setSelectedQuestionDTO(selectedQuestionDTO);
-            focusSelectedQuestion();
         }
+
+        focusSelectedQuestion(selectedQuestionDTO);
     }
 
     @Override
     public void updateLabel(String value) {
         this.label.setValue(value);
+    }
+
+    @Override
+    public void loadQuestionAnswer(QualityQuestionDTO questionDTO, QuestionAnswerDTO answerDTO) {
+
     }
 
     @Override
@@ -139,39 +137,44 @@ class QualityQuestionView extends VerticalLayout {
     private Label keyLbl = new Label();
     private Label nameLbl = new Label();
 
-    Binder<QualityQuestionDTO> questionDTOBinder = new Binder<>();
+    Binder<QuestionAnswerDTO> answerDTOBinder = new Binder<>();
+
     private TextArea textArea = new TextArea();
 
     private Button btnReset = new Button(VaadinIcons.ARROW_BACKWARD);
     private Button btnSave = new Button(VaadinIcons.CLOUD_UPLOAD_O);
 
+    private Layout loProofs = new VerticalLayout();
 
     public QualityQuestionView(QualityChapterView coachChapterView, QualityQuestionDTO questionDTO) {
         this.coachChapterView = coachChapterView;
         this.questionDTO = questionDTO;
         initView();
-//        addComponent(keyLbl);
+
         addComponent(nameLbl);
         addComponent(textArea);
 
         addComponent(btnReset);
         addComponent(btnSave);
-        updateView();
+
+        addComponent(loProofs);
+        showProofs();
+//        updateView();
     }
 
     private void initView() {
         keyLbl.setValue(questionDTO.getKey());
         nameLbl.setValue(questionDTO.getName());
 
-        questionDTOBinder.bind(textArea, QualityQuestionDTO::getQuestionAnswer, QualityQuestionDTO::setQuestionAnswer);
-        questionDTOBinder.readBean(questionDTO);
+        answerDTOBinder.bind(textArea, QuestionAnswerDTO::getAnswerTxt, QuestionAnswerDTO::setAnswerTxt);
+        answerDTOBinder.readBean(questionDTO.getAnswerDTO());
 
         textArea.addValueChangeListener(valueChangeEvent -> {
             updateView();
         });
 
         btnReset.addClickListener(clickEvent -> {
-            questionDTOBinder.readBean(questionDTO);
+            answerDTOBinder.readBean(questionDTO.getAnswerDTO());
             updateView();
         });
 
@@ -181,9 +184,16 @@ class QualityQuestionView extends VerticalLayout {
         });
     }
 
+    private void showProofs() {
+        loProofs.removeAllComponents();
+        for(IDmsFileDTO fileDTO : questionDTO.getProofList()) {
+            loProofs.addComponent(new Label(fileDTO.getFilePath()));
+        }
+    }
+
     private void updateView() {
-        btnReset.setEnabled(questionDTOBinder.hasChanges());
-        btnSave.setEnabled(questionDTOBinder.hasChanges());
+        btnReset.setEnabled(answerDTOBinder.hasChanges());
+        btnSave.setEnabled(answerDTOBinder.hasChanges());
     }
 
     private void saveQuestion() {
@@ -192,11 +202,18 @@ class QualityQuestionView extends VerticalLayout {
     }
 
     public void syncDTO() {
-        if (!questionDTOBinder.hasChanges()) {
+        if (!answerDTOBinder.hasChanges()) {
             return;
         }
+
+        /*First new answer*/
+        if(questionDTO.getAnswerDTO() == null) {
+            QuestionAnswerDTO newAnswerDTO = new QuestionAnswerDTO();
+            questionDTO.setAnswerDTO(newAnswerDTO);
+        }
+
         try {
-                questionDTOBinder.writeBean(questionDTO);
+            answerDTOBinder.writeBean(questionDTO.getAnswerDTO());
         } catch (ValidationException e) {
             e.printStackTrace();
         }
@@ -204,5 +221,9 @@ class QualityQuestionView extends VerticalLayout {
 
     public String getQuestionKey() {
         return questionDTO.getKey();
+    }
+
+    public QualityQuestionDTO getQuestionDTO() {
+        return questionDTO;
     }
 }

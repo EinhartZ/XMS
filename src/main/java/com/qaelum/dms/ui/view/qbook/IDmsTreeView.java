@@ -1,5 +1,6 @@
 package com.qaelum.dms.ui.view.qbook;
 
+import com.qaelum.dms.commons.dto.IDmsFileDTO;
 import com.qaelum.dms.commons.dto.S3FileDTO;
 
 import java.util.List;
@@ -13,13 +14,25 @@ public interface IDmsTreeView {
     void addListener(DmsTreeViewListener listener);
 
     interface DmsTreeViewListener {
-        void attachProof(String docKey);
-        void attachProof(List<String> docKeysList);
+        default void attachProof(IDmsFileDTO fileDTO) {
+            //NOP
+        };
+        default void attachProof(List<String> docKeysList) {
+            //NOP
+        };
 
-        void addFolder(String filePath);
-        void removeFolder(String filePath);
-        void removeFile(String filePath);
+        default void addFolder(String filePath) {
+            //NOP
+        };
+        default void removeFolder(String filePath) {
+            //NOP
+        };
+        default void removeFile(String filePath) {
+            //NOP
+        };
 
-        void removeFolderRecursive(S3FileDTO s3fileDTO);
+        default void removeFolderRecursive(S3FileDTO s3fileDTO) {
+            //NOP
+        };
     }
 }

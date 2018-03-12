@@ -18,6 +18,11 @@ public class S3FileDTO implements IDmsFileDTO {
         file = new File(filePath);
     }
 
+    @Override
+    public String getFileKey() {
+        return getFilePath();
+    }
+
     public String getFilePath() {
         return filePath;
     }

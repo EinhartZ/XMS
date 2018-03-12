@@ -22,16 +22,6 @@ public class DmsTreePresenter implements IDmsTreeView.DmsTreeViewListener {
     }
 
     @Override
-    public void attachProof(String docKey) {
-        //NOP
-    }
-
-    @Override
-    public void attachProof(List<String> docKeysList) {
-        //NOP
-    }
-
-    @Override
     public void addFolder(String filePath) {
         dmsFileDAO.addFolder(filePath);
     }

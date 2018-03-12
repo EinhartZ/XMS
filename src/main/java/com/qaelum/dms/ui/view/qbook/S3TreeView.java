@@ -106,7 +106,7 @@ public class S3TreeView extends VerticalLayout implements IDmsTreeView{
             });
             event.getContextMenu().addItem("Attach", VaadinIcons.PUZZLE_PIECE, menuItem -> {
                 for (DmsTreeViewListener listener : listeners) {
-                    listener.attachProof(item.getFilePath());
+                    listener.attachProof(item);
                 }
             });
 

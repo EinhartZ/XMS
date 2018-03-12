@@ -11,7 +11,8 @@ import java.io.File;
  * Created by einha on 2/20/2018.
  */
 public class CoachUtil {
-    private static String ROOT = "C:\\qaelum\\QC3\\qms\\qualitycoach";
+//    private static String ROOT = "C:\\qaelum\\QC3\\qms\\qualitycoach";
+    private static String ROOT = System.getProperty("user.home") + File.separator + "qualitycoach";
 
     private static String RESOURCES_FOLDER = "resources";
     private static String DATA_FOLDER = "data";

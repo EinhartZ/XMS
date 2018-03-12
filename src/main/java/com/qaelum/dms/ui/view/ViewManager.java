@@ -1,5 +1,7 @@
 package com.qaelum.dms.ui.view;
 
+import com.qaelum.dms.domain.dao.CoachProjectDAO;
+import com.qaelum.dms.domain.dao.ICoachProjectDAO;
 import com.qaelum.dms.domain.dao.IDmsFileDAO;
 import com.qaelum.dms.domain.dao.S3DAO;
 import com.qaelum.dms.ui.model.coach.CoachChapterModel;
@@ -48,15 +50,17 @@ public class ViewManager {
         coachChapterView = new QualityChapterView();
         coachReportView = new CoachReportView();
 
+        ICoachProjectDAO coachProjectDAO = CoachProjectDAO.getInstance();
+
         //link CoachTree and CoachAnswer
-        TreeChapterPresenter treeChapterPresenter = new TreeChapterPresenter(coachTreeView, coachChapterView);
+        TreeChapterPresenter treeChapterPresenter = new TreeChapterPresenter(coachTreeView, coachChapterView, coachProjectDAO);
 
         //link ChapterView to ChapterModel
-        CoachChapterModel chapterModel = new CoachChapterModel();
-        CoachChapterPresenter chapterPresenter = new CoachChapterPresenter(coachChapterView, chapterModel);
+//        CoachChapterModel chapterModel = new CoachChapterModel();
+        CoachChapterPresenter chapterPresenter = new CoachChapterPresenter(coachChapterView, coachProjectDAO);
 
         //link DMSTree to
-        TreesPresenter treesPresenter = new TreesPresenter(s3TreeView, coachTreeView);
+        TreesPresenter treesPresenter = new TreesPresenter(s3TreeView, coachTreeView, coachProjectDAO);
 
         //link DmsTree to Model
         IDmsFileDAO dmsFileDAO = S3DAO.getInstance();

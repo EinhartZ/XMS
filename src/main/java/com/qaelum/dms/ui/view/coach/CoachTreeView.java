@@ -79,6 +79,8 @@ public class CoachTreeView extends VerticalLayout implements ICoachTreeView{
 
         List<QualityQuestion> siblingQuestions = parentChapter.getQuestions();
 
+        treeGrid.expand(parentChapter);
+
         for(QualityQuestion siblingQuestion : siblingQuestions) {
             if (siblingQuestion.getItemKey().equals(key)) {
                 treeGrid.select(siblingQuestion);

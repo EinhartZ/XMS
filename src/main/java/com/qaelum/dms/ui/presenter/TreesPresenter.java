@@ -1,6 +1,8 @@
 package com.qaelum.dms.ui.presenter;
 
+import com.qaelum.dms.commons.dto.IDmsFileDTO;
 import com.qaelum.dms.commons.dto.S3FileDTO;
+import com.qaelum.dms.domain.dao.ICoachProjectDAO;
 import com.qaelum.dms.ui.view.coach.ICoachTreeView;
 import com.qaelum.dms.ui.view.qbook.IDmsTreeView;
 
@@ -14,17 +16,20 @@ public class TreesPresenter implements IDmsTreeView.DmsTreeViewListener {
 
     private IDmsTreeView dmsTreeView;
     private ICoachTreeView coachTreeView;
+    private ICoachProjectDAO coachProjectDAO;
 
-    public TreesPresenter(IDmsTreeView dmsTreeView, ICoachTreeView coachTreeView) {
+    public TreesPresenter(IDmsTreeView dmsTreeView, ICoachTreeView coachTreeView, ICoachProjectDAO coachProjectDAO) {
         this.dmsTreeView = dmsTreeView;
         this.coachTreeView = coachTreeView;
+
+        this.coachProjectDAO = coachProjectDAO;
 
         dmsTreeView.addListener(this);
     }
 
     @Override
-    public void attachProof(String docKey) {
-        System.out.println("Attach Proof " + docKey + " to " + coachTreeView.getSelectedItem());
+    public void attachProof(IDmsFileDTO fileDTO) {
+        coachProjectDAO.attachProof(coachTreeView.getSelectedItem(), fileDTO);
     }
 
     @Override
@@ -32,23 +37,4 @@ public class TreesPresenter implements IDmsTreeView.DmsTreeViewListener {
 
     }
 
-    @Override
-    public void addFolder(String filePath) {
-        //NOP
-    }
-
-    @Override
-    public void removeFolder(String filePath) {
-        //NOP
-    }
-
-    @Override
-    public void removeFile(String filePath) {
-        //NOP
-    }
-
-    @Override
-    public void removeFolderRecursive(S3FileDTO s3fileDTO) {
-        //NOP
-    }
 }

@@ -26,111 +26,117 @@
     <option name="AUTO_SCROLL_FROM_SOURCE" value="false" />
   </component>
   <component name="DockManager">
-    <window id="3">
+    <window id="1">
       <content type="file-editors">
         <state>
-          <leaf>
-            <file leaf-file-name="S3DAO.java" pinned="false" current-in-tab="true">
-              <entry file="file://$PROJECT_DIR$/src/main/java/com/qaelum/dms/domain/dao/S3DAO.java">
-                <provider selected="true" editor-type-id="text-editor">
-                  <state relative-caret-position="744">
-                    <caret line="152" column="10" selection-start-line="152" selection-start-column="10" selection-end-line="154" selection-end-column="9" />
-                    <folding>
-                      <element signature="imports" expanded="true" />
-                    </folding>
-                  </state>
-                </provider>
-              </entry>
-            </file>
-          </leaf>
-        </state>
-      </content>
-    </window>
-    <window id="2">
-      <content type="file-editors">
-        <state>
-          <leaf>
-            <file leaf-file-name="DmsTreeView.java" pinned="false" current-in-tab="true">
-              <entry file="file://$PROJECT_DIR$/src/main/java/com/qaelum/dms/ui/view/qbook/DmsTreeView.java">
-                <provider selected="true" editor-type-id="text-editor">
-                  <state relative-caret-position="272">
-                    <caret line="16" column="18" selection-start-line="16" selection-start-column="18" selection-end-line="16" selection-end-column="18" />
-                    <folding>
-                      <element signature="imports" expanded="true" />
-                    </folding>
-                  </state>
-                </provider>
-              </entry>
-            </file>
-            <file leaf-file-name="SplitRightView.java" pinned="false" current-in-tab="false">
-              <entry file="file://$PROJECT_DIR$/src/main/java/com/qaelum/dms/ui/view/home/SplitRightView.java">
-                <provider selected="true" editor-type-id="text-editor">
-                  <state relative-caret-position="612">
-                    <caret line="45" column="13" selection-start-line="45" selection-start-column="13" selection-end-line="45" selection-end-column="13" />
-                    <folding />
-                  </state>
-                </provider>
-              </entry>
-            </file>
-            <file leaf-file-name="WikiSub.java" pinned="false" current-in-tab="false">
-              <entry file="file://$PROJECT_DIR$/src/main/java/com/qaelum/dms/ui/view/qbook/WikiSub.java">
-                <provider selected="true" editor-type-id="text-editor">
-                  <state relative-caret-position="85">
-                    <caret line="8" column="11" selection-start-line="8" selection-start-column="11" selection-end-line="8" selection-end-column="11" />
-                    <folding />
-                  </state>
-                </provider>
-              </entry>
-            </file>
-          </leaf>
+          <splitter split-orientation="horizontal" split-proportion="0.5">
+            <split-first>
+              <leaf>
+                <file leaf-file-name="CoachProjectDAO.java" pinned="false" current-in-tab="true">
+                  <entry file="file://$PROJECT_DIR$/src/main/java/com/qaelum/dms/domain/dao/CoachProjectDAO.java">
+                    <provider selected="true" editor-type-id="text-editor">
+                      <state relative-caret-position="489">
+                        <caret line="74" column="53" lean-forward="false" selection-start-line="74" selection-start-column="53" selection-end-line="74" selection-end-column="53" />
+                        <folding>
+                          <element signature="imports" expanded="true" />
+                          <element signature="e#2989#2990#0" expanded="true" />
+                          <element signature="e#3041#3042#0" expanded="true" />
+                        </folding>
+                      </state>
+                    </provider>
+                  </entry>
+                </file>
+              </leaf>
+            </split-first>
+            <split-second>
+              <leaf>
+                <file leaf-file-name="ICoachProjectDAO.java" pinned="false" current-in-tab="true">
+                  <entry file="file://$PROJECT_DIR$/src/main/java/com/qaelum/dms/domain/dao/ICoachProjectDAO.java">
+                    <provider selected="true" editor-type-id="text-editor">
+                      <state relative-caret-position="225">
+                        <caret line="15" column="29" lean-forward="true" selection-start-line="15" selection-start-column="29" selection-end-line="15" selection-end-column="29" />
+                        <folding>
+                          <element signature="imports" expanded="true" />
+                        </folding>
+                      </state>
+                    </provider>
+                  </entry>
+                </file>
+              </leaf>
+            </split-second>
+          </splitter>
         </state>
       </content>
     </window>
   </component>
-  <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FavoritesManager">
     <favorites_list name="TreeDnD" />
   </component>
   <component name="FileEditorManager">
-    <splitter split-orientation="horizontal" split-proportion="0.75803">
+    <splitter split-orientation="horizontal" split-proportion="0.46149108">
       <split-first>
         <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-          <file leaf-file-name="S3TreeView.java" pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/src/main/java/com/qaelum/dms/ui/view/qbook/S3TreeView.java">
+          <file leaf-file-name="TreeChapterPresenter.java" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/src/main/java/com/qaelum/dms/ui/presenter/coach/TreeChapterPresenter.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="373">
-                  <caret line="125" column="72" selection-start-line="125" selection-start-column="72" selection-end-line="125" selection-end-column="72" />
+                <state relative-caret-position="504">
+                  <caret line="86" column="30" lean-forward="false" selection-start-line="86" selection-start-column="30" selection-end-line="86" selection-end-column="30" />
                   <folding>
-                    <element signature="imports" expanded="true" />
+                    <element signature="e#3431#3432#0" expanded="true" />
+                    <element signature="e#3499#3500#0" expanded="true" />
                   </folding>
                 </state>
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="WikiView.java" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/main/java/com/qaelum/dms/ui/view/qbook/WikiView.java">
+          <file leaf-file-name="ICoachChapterView.java" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/src/main/java/com/qaelum/dms/ui/view/coach/ICoachChapterView.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="631">
-                  <caret line="85" column="21" selection-start-line="85" selection-start-column="21" selection-end-line="85" selection-end-column="21" />
+                <state relative-caret-position="405">
+                  <caret line="29" column="21" lean-forward="false" selection-start-line="29" selection-start-column="21" selection-end-line="29" selection-end-column="21" />
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="QualityChapterView.java" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/src/main/java/com/qaelum/dms/ui/view/coach/QualityChapterView.java">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="243">
+                  <caret line="52" column="34" lean-forward="false" selection-start-line="52" selection-start-column="34" selection-end-line="52" selection-end-column="34" />
                   <folding>
-                    <element signature="imports" expanded="true" />
-                    <element signature="e#1996#1997#0" expanded="true" />
-                    <element signature="e#2035#2036#0" expanded="true" />
-                    <element signature="e#2421#2422#0" expanded="true" />
-                    <element signature="e#2472#2473#0" expanded="true" />
+                    <element signature="e#3657#3658#0" expanded="true" />
+                    <element signature="e#3699#3700#0" expanded="true" />
+                    <element signature="e#3899#3900#0" expanded="true" />
+                    <element signature="e#3938#3939#0" expanded="true" />
+                    <element signature="e#6592#6593#0" expanded="true" />
+                    <element signature="e#6635#6636#0" expanded="true" />
+                    <element signature="e#6685#6686#0" expanded="true" />
+                    <element signature="e#6719#6720#0" expanded="true" />
                   </folding>
                 </state>
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="IDmsFileDAO.java" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/main/java/com/qaelum/dms/domain/dao/IDmsFileDAO.java">
+          <file leaf-file-name="CoachProtocolTest.java" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/src/test/java/com/qaelum/coach/model/CoachProtocolTest.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="408">
-                  <caret line="24" column="12" selection-start-line="24" selection-start-column="12" selection-end-line="24" selection-end-column="12" />
+                <state relative-caret-position="285">
+                  <caret line="26" column="0" lean-forward="false" selection-start-line="26" selection-start-column="0" selection-end-line="26" selection-end-column="0" />
                   <folding>
-                    <element signature="imports" expanded="true" />
+                    <element signature="e#540#541#0" expanded="true" />
+                    <element signature="e#618#619#0" expanded="true" />
                   </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="ICoachTreeView.java" pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/src/main/java/com/qaelum/dms/ui/view/coach/ICoachTreeView.java">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="180">
+                  <caret line="12" column="9" lean-forward="false" selection-start-line="12" selection-start-column="9" selection-end-line="12" selection-end-column="9" />
+                  <folding />
                 </state>
               </provider>
             </entry>
@@ -139,66 +145,12 @@
       </split-first>
       <split-second>
         <leaf>
-          <file leaf-file-name="WikiSub.java" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/main/java/com/qaelum/dms/ui/view/qbook/WikiSub.java">
+          <file leaf-file-name="CoachTreeView.java" pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/src/main/java/com/qaelum/dms/ui/view/coach/CoachTreeView.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="204">
-                  <caret line="15" column="12" selection-start-line="15" selection-start-column="12" selection-end-line="15" selection-end-column="12" />
+                <state relative-caret-position="168">
+                  <caret line="63" column="3" lean-forward="false" selection-start-line="63" selection-start-column="3" selection-end-line="80" selection-end-column="0" />
                   <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="ViewManager.java" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/main/java/com/qaelum/dms/ui/view/ViewManager.java">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="176">
-                  <caret line="32" column="15" selection-start-line="32" selection-start-column="15" selection-end-line="32" selection-end-column="15" />
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="WikiViewPresenter.java" pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/src/main/java/com/qaelum/dms/ui/presenter/qbook/WikiViewPresenter.java">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="340">
-                  <caret line="20" column="35" selection-start-line="20" selection-start-column="35" selection-end-line="20" selection-end-column="35" />
-                  <folding>
-                    <element signature="imports" expanded="true" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="IWikiView.java" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/main/java/com/qaelum/dms/ui/view/qbook/IWikiView.java">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="221">
-                  <caret line="13" column="13" selection-start-line="13" selection-start-column="13" selection-end-line="13" selection-end-column="13" />
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="IDmsFileDTO.java" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/main/java/com/qaelum/dms/commons/dto/IDmsFileDTO.java">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="102">
-                  <caret line="6" column="21" selection-start-line="6" selection-start-column="21" selection-end-line="6" selection-end-column="21" />
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="DmsFileDTO.java" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/main/java/com/qaelum/dms/commons/dto/DmsFileDTO.java">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="188">
-                  <caret line="12" column="35" selection-start-line="12" selection-start-column="35" selection-end-line="12" selection-end-column="35" />
-                  <folding>
-                    <element signature="imports" expanded="true" />
-                  </folding>
                 </state>
               </provider>
             </entry>
@@ -215,6 +167,15 @@
       </list>
     </option>
   </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>java</find>
+      <find>selectedQuestionDTO</find>
+    </findStrings>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
   <component name="GradleLocalSettings">
     <option name="externalProjectsViewState">
       <projects_view />
@@ -223,16 +184,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$MAVEN_REPOSITORY$/com/vaadin/vaadin-server/8.3.1/vaadin-server-8.3.1.jar!/com/vaadin/ui/components/grid/GridRowDragger.class" />
-        <option value="$PROJECT_DIR$/src/main/java/com/qaelum/coach/TreeView.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/qaelum/coach/model/CoachProject.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/qaelum/coach/model/qualityItem/QualityQuetion.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/qaelum/coach/model/qualityItem/QualityQuestion.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/qaelum/coach/model/ProtocolScheme.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/qaelum/coach/model/CoachProtocol.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/qaelum/coach/model/qualityItem/AbstractQualityItem.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/qaelum/coach/model/qualityItem/QualityChapter.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/qaelum/coach/model/CoachUtil.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/qaelum/coach/view/qualityItem/QualityChapterTreeView.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/qaelum/coach/view/QualityChapterTreeView.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/qaelum/coach/MyUI.java" />
@@ -243,7 +194,6 @@
         <option value="$PROJECT_DIR$/src/main/java/com/qaelum/qbook/view/S3TreeView.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/qaelum/dms/ui/TabForMenu.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/qaelum/dms/domain/dao/datasource/DmsOracleDAOFactory.java" />
-        <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/src/main/java/com/qaelum/dms/ui/view/home/SplitLeftView.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/qaelum/dms/domain/entity/coach/qualityItem/AbstractQualityItem.java" />
         <option value="$PROJECT_DIR$/src/test/java/com/qaelum/coach/model/CoachProtocolTest.java" />
@@ -258,10 +208,8 @@
         <option value="$PROJECT_DIR$/src/main/java/com/qaelum/dms/ui/view/qbook/DmsWikiView.java" />
         <option value="$PROJECT_DIR$/src/test/java/com/qaelum/qbook/model/S3Test.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/qaelum/dms/ui/model/qbook/S3TreeDataProvider.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/qaelum/dms/commons/dto/S3FileDTO.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/qaelum/dms/ui/view/qbook/IDmsWikiView.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/qaelum/dms/ui/view/qbook/DmsTreeView.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/qaelum/dms/ui/view/ViewManager.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/qaelum/dms/ui/view/home/SplitRightView.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/qaelum/dms/ui/view/qbook/WikiSub.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/qaelum/dms/ui/presenter/qbook/WikiViewPresenter.java" />
@@ -269,7 +217,24 @@
         <option value="$PROJECT_DIR$/src/main/java/com/qaelum/dms/ui/view/qbook/WikiView.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/qaelum/dms/ui/view/qbook/IWikiView.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/qaelum/dms/domain/dao/S3DAO.java" />
+        <option value="$PROJECT_DIR$/pom.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/com/qaelum/dms/ui/presenter/qbook/DmsTreePresenter.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/qaelum/dms/domain/entity/coach/CoachUtil.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/qaelum/dms/commons/dto/QuestionAnswerDTO.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/qaelum/dms/ui/view/coach/ICoachChapterView.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/qaelum/dms/ui/presenter/coach/CoachChapterPresenter.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/qaelum/dms/ui/view/qbook/S3TreeView.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/qaelum/dms/ui/view/qbook/IDmsTreeView.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/qaelum/dms/ui/view/ViewManager.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/qaelum/dms/commons/dto/IDmsFileDTO.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/qaelum/dms/commons/dto/S3FileDTO.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/qaelum/dms/ui/presenter/TreesPresenter.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/qaelum/dms/domain/dao/ICoachProjectDAO.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/qaelum/dms/commons/dto/QualityQuestionDTO.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/qaelum/dms/domain/dao/CoachProjectDAO.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/qaelum/dms/ui/view/coach/CoachTreeView.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/qaelum/dms/ui/view/coach/QualityChapterView.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/qaelum/dms/ui/presenter/coach/TreeChapterPresenter.java" />
       </list>
     </option>
   </component>
@@ -280,11 +245,6 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="MavenImportPreferences">
-    <option name="generalSettings">
-      <MavenGeneralSettings>
-        <option name="mavenHome" value="D:/apache-maven-3.5.2" />
-      </MavenGeneralSettings>
-    </option>
     <option name="importingSettings">
       <MavenImportingSettings>
         <option name="importAutomatically" value="true" />
@@ -293,89 +253,83 @@
   </component>
   <component name="MavenProjectNavigator">
     <treeState>
-      <PATH>
-        <PATH_ELEMENT>
-          <option name="myItemId" value="" />
-          <option name="myItemType" value="org.jetbrains.idea.maven.navigator.MavenProjectsStructure$RootNode" />
-        </PATH_ELEMENT>
-        <PATH_ELEMENT>
-          <option name="myItemId" value="vaadin-playground" />
-          <option name="myItemType" value="org.jetbrains.idea.maven.navigator.MavenProjectsStructure$ProjectNode" />
-        </PATH_ELEMENT>
-        <PATH_ELEMENT>
-          <option name="myItemId" value="Dependencies" />
-          <option name="myItemType" value="org.jetbrains.idea.maven.navigator.MavenProjectsStructure$DependenciesNode" />
-        </PATH_ELEMENT>
-      </PATH>
-      <PATH>
-        <PATH_ELEMENT>
-          <option name="myItemId" value="" />
-          <option name="myItemType" value="org.jetbrains.idea.maven.navigator.MavenProjectsStructure$RootNode" />
-        </PATH_ELEMENT>
-        <PATH_ELEMENT>
-          <option name="myItemId" value="vaadin-playground" />
-          <option name="myItemType" value="org.jetbrains.idea.maven.navigator.MavenProjectsStructure$ProjectNode" />
-        </PATH_ELEMENT>
-      </PATH>
-      <PATH>
-        <PATH_ELEMENT>
-          <option name="myItemId" value="" />
-          <option name="myItemType" value="org.jetbrains.idea.maven.navigator.MavenProjectsStructure$RootNode" />
-        </PATH_ELEMENT>
-        <PATH_ELEMENT>
-          <option name="myItemId" value="vaadin-playground" />
-          <option name="myItemType" value="org.jetbrains.idea.maven.navigator.MavenProjectsStructure$ProjectNode" />
-        </PATH_ELEMENT>
-        <PATH_ELEMENT>
-          <option name="myItemId" value="Plugins" />
-          <option name="myItemType" value="org.jetbrains.idea.maven.navigator.MavenProjectsStructure$PluginsNode" />
-        </PATH_ELEMENT>
-      </PATH>
-      <PATH>
-        <PATH_ELEMENT>
-          <option name="myItemId" value="" />
-          <option name="myItemType" value="org.jetbrains.idea.maven.navigator.MavenProjectsStructure$RootNode" />
-        </PATH_ELEMENT>
-        <PATH_ELEMENT>
-          <option name="myItemId" value="vaadin-playground" />
-          <option name="myItemType" value="org.jetbrains.idea.maven.navigator.MavenProjectsStructure$ProjectNode" />
-        </PATH_ELEMENT>
-        <PATH_ELEMENT>
-          <option name="myItemId" value="Plugins" />
-          <option name="myItemType" value="org.jetbrains.idea.maven.navigator.MavenProjectsStructure$PluginsNode" />
-        </PATH_ELEMENT>
-        <PATH_ELEMENT>
-          <option name="myItemId" value="jetty" />
-          <option name="myItemType" value="org.jetbrains.idea.maven.navigator.MavenProjectsStructure$PluginNode" />
-        </PATH_ELEMENT>
-      </PATH>
-      <PATH>
-        <PATH_ELEMENT>
-          <option name="myItemId" value="" />
-          <option name="myItemType" value="org.jetbrains.idea.maven.navigator.MavenProjectsStructure$RootNode" />
-        </PATH_ELEMENT>
-        <PATH_ELEMENT>
-          <option name="myItemId" value="Profiles" />
-          <option name="myItemType" value="org.jetbrains.idea.maven.navigator.MavenProjectsStructure$ProfilesNode" />
-        </PATH_ELEMENT>
-      </PATH>
+      <expand>
+        <path>
+          <item name="" type="16c1761:MavenProjectsStructure$RootNode" />
+          <item name="vaadin-playground" type="9519ce18:MavenProjectsStructure$ProjectNode" />
+        </path>
+        <path>
+          <item name="" type="16c1761:MavenProjectsStructure$RootNode" />
+          <item name="vaadin-playground" type="9519ce18:MavenProjectsStructure$ProjectNode" />
+          <item name="Plugins" type="7aea1407:MavenProjectsStructure$PluginsNode" />
+        </path>
+        <path>
+          <item name="" type="16c1761:MavenProjectsStructure$RootNode" />
+          <item name="vaadin-playground" type="9519ce18:MavenProjectsStructure$ProjectNode" />
+          <item name="Plugins" type="7aea1407:MavenProjectsStructure$PluginsNode" />
+          <item name="jetty" type="36feed69:MavenProjectsStructure$PluginNode" />
+        </path>
+      </expand>
+      <select />
     </treeState>
   </component>
-  <component name="ProjectFrameBounds">
-    <option name="x" value="-8" />
-    <option name="y" value="-8" />
-    <option name="width" value="1936" />
-    <option name="height" value="1056" />
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="1440" />
+    <option name="y" value="23" />
+    <option name="width" value="1920" />
+    <option name="height" value="1057" />
   </component>
-  <component name="ProjectLevelVcsManager" settingsEditedManually="false">
-    <OptionsSetting value="true" id="Add" />
-    <OptionsSetting value="true" id="Remove" />
-    <OptionsSetting value="true" id="Checkout" />
-    <OptionsSetting value="true" id="Update" />
-    <OptionsSetting value="true" id="Status" />
-    <OptionsSetting value="true" id="Edit" />
-    <ConfirmationsSetting value="0" id="Add" />
-    <ConfirmationsSetting value="0" id="Remove" />
+  <component name="ProjectInspectionProfilesVisibleTreeState">
+    <entry key="Project Default">
+      <profile-state>
+        <expanded-state>
+          <State>
+            <id />
+          </State>
+          <State>
+            <id>Class structureJava</id>
+          </State>
+          <State>
+            <id>Code maturity issuesJava</id>
+          </State>
+          <State>
+            <id>JUnit issuesJava</id>
+          </State>
+          <State>
+            <id>Java</id>
+          </State>
+          <State>
+            <id>Java 5Java language level migration aidsJava</id>
+          </State>
+          <State>
+            <id>Java 7Java language level migration aidsJava</id>
+          </State>
+          <State>
+            <id>Java 8Java language level migration aidsJava</id>
+          </State>
+          <State>
+            <id>Java language level migration aidsJava</id>
+          </State>
+          <State>
+            <id>Javadoc issuesJava</id>
+          </State>
+          <State>
+            <id>Numeric issuesJava</id>
+          </State>
+          <State>
+            <id>TestNGJava</id>
+          </State>
+          <State>
+            <id>Threading issuesJava</id>
+          </State>
+        </expanded-state>
+        <selected-state>
+          <State>
+            <id>Java 8Java language level migration aidsJava</id>
+          </State>
+        </selected-state>
+      </profile-state>
+    </entry>
   </component>
   <component name="ProjectView">
     <navigator currentView="ProjectPane" proportions="" version="1">
@@ -393,427 +347,291 @@
     </navigator>
     <panes>
       <pane id="Scope" />
-      <pane id="PackagesPane" />
       <pane id="Scratches" />
+      <pane id="AndroidView" />
       <pane id="ProjectPane">
         <subPane>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="TreeDnD" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="TreeDnD" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="TreeDnD" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="TreeDnD" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="TreeDnD" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="TreeDnD" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="TreeDnD" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="TreeDnD" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="TreeDnD" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="com" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="qaelum" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="TreeDnD" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="TreeDnD" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="com" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="qaelum" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="dms" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ui" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="view" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="TreeDnD" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="TreeDnD" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="com" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="qaelum" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="dms" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ui" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="view" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="qbook" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="TreeDnD" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="TreeDnD" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="com" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="qaelum" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="dms" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ui" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="presenter" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="qbook" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="TreeDnD" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="TreeDnD" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="com" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="qaelum" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="dms" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ui" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="presenter" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="TreeDnD" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="TreeDnD" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="com" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="qaelum" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="dms" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ui" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="TreeDnD" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="TreeDnD" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="com" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="qaelum" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="dms" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="domain" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="TreeDnD" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="TreeDnD" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="com" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="qaelum" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="dms" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="domain" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="dao" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="TreeDnD" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="TreeDnD" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="com" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="qaelum" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="dms" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
+          <expand>
+            <path>
+              <item name="XMS" type="b2602c69:ProjectViewProjectNode" />
+              <item name="XMS" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="XMS" type="b2602c69:ProjectViewProjectNode" />
+              <item name="XMS" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="XMS" type="b2602c69:ProjectViewProjectNode" />
+              <item name="XMS" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="XMS" type="b2602c69:ProjectViewProjectNode" />
+              <item name="XMS" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="XMS" type="b2602c69:ProjectViewProjectNode" />
+              <item name="XMS" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="qaelum" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="XMS" type="b2602c69:ProjectViewProjectNode" />
+              <item name="XMS" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="qaelum" type="462c0819:PsiDirectoryNode" />
+              <item name="dms" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="XMS" type="b2602c69:ProjectViewProjectNode" />
+              <item name="XMS" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="qaelum" type="462c0819:PsiDirectoryNode" />
+              <item name="dms" type="462c0819:PsiDirectoryNode" />
+              <item name="dto" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="XMS" type="b2602c69:ProjectViewProjectNode" />
+              <item name="XMS" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="qaelum" type="462c0819:PsiDirectoryNode" />
+              <item name="dms" type="462c0819:PsiDirectoryNode" />
+              <item name="domain" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="XMS" type="b2602c69:ProjectViewProjectNode" />
+              <item name="XMS" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="qaelum" type="462c0819:PsiDirectoryNode" />
+              <item name="dms" type="462c0819:PsiDirectoryNode" />
+              <item name="domain" type="462c0819:PsiDirectoryNode" />
+              <item name="dao" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="XMS" type="b2602c69:ProjectViewProjectNode" />
+              <item name="XMS" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="qaelum" type="462c0819:PsiDirectoryNode" />
+              <item name="dms" type="462c0819:PsiDirectoryNode" />
+              <item name="domain" type="462c0819:PsiDirectoryNode" />
+              <item name="coach" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="XMS" type="b2602c69:ProjectViewProjectNode" />
+              <item name="XMS" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="qaelum" type="462c0819:PsiDirectoryNode" />
+              <item name="dms" type="462c0819:PsiDirectoryNode" />
+              <item name="ui" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="XMS" type="b2602c69:ProjectViewProjectNode" />
+              <item name="XMS" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="qaelum" type="462c0819:PsiDirectoryNode" />
+              <item name="dms" type="462c0819:PsiDirectoryNode" />
+              <item name="ui" type="462c0819:PsiDirectoryNode" />
+              <item name="model" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="XMS" type="b2602c69:ProjectViewProjectNode" />
+              <item name="XMS" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="qaelum" type="462c0819:PsiDirectoryNode" />
+              <item name="dms" type="462c0819:PsiDirectoryNode" />
+              <item name="ui" type="462c0819:PsiDirectoryNode" />
+              <item name="model" type="462c0819:PsiDirectoryNode" />
+              <item name="coach" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="XMS" type="b2602c69:ProjectViewProjectNode" />
+              <item name="XMS" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="qaelum" type="462c0819:PsiDirectoryNode" />
+              <item name="dms" type="462c0819:PsiDirectoryNode" />
+              <item name="ui" type="462c0819:PsiDirectoryNode" />
+              <item name="presenter" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="XMS" type="b2602c69:ProjectViewProjectNode" />
+              <item name="XMS" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="qaelum" type="462c0819:PsiDirectoryNode" />
+              <item name="dms" type="462c0819:PsiDirectoryNode" />
+              <item name="ui" type="462c0819:PsiDirectoryNode" />
+              <item name="presenter" type="462c0819:PsiDirectoryNode" />
+              <item name="coach" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="XMS" type="b2602c69:ProjectViewProjectNode" />
+              <item name="XMS" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="qaelum" type="462c0819:PsiDirectoryNode" />
+              <item name="dms" type="462c0819:PsiDirectoryNode" />
+              <item name="ui" type="462c0819:PsiDirectoryNode" />
+              <item name="presenter" type="462c0819:PsiDirectoryNode" />
+              <item name="qbook" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="XMS" type="b2602c69:ProjectViewProjectNode" />
+              <item name="XMS" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="qaelum" type="462c0819:PsiDirectoryNode" />
+              <item name="dms" type="462c0819:PsiDirectoryNode" />
+              <item name="ui" type="462c0819:PsiDirectoryNode" />
+              <item name="view" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="XMS" type="b2602c69:ProjectViewProjectNode" />
+              <item name="XMS" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="qaelum" type="462c0819:PsiDirectoryNode" />
+              <item name="dms" type="462c0819:PsiDirectoryNode" />
+              <item name="ui" type="462c0819:PsiDirectoryNode" />
+              <item name="view" type="462c0819:PsiDirectoryNode" />
+              <item name="coach" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="XMS" type="b2602c69:ProjectViewProjectNode" />
+              <item name="XMS" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="qaelum" type="462c0819:PsiDirectoryNode" />
+              <item name="dms" type="462c0819:PsiDirectoryNode" />
+              <item name="ui" type="462c0819:PsiDirectoryNode" />
+              <item name="view" type="462c0819:PsiDirectoryNode" />
+              <item name="coach" type="462c0819:PsiDirectoryNode" />
+              <item name="QualityChapterView.java" type="529ef68f:ClassesTreeStructureProvider$PsiClassOwnerTreeNode" />
+            </path>
+            <path>
+              <item name="XMS" type="b2602c69:ProjectViewProjectNode" />
+              <item name="XMS" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="qaelum" type="462c0819:PsiDirectoryNode" />
+              <item name="dms" type="462c0819:PsiDirectoryNode" />
+              <item name="ui" type="462c0819:PsiDirectoryNode" />
+              <item name="view" type="462c0819:PsiDirectoryNode" />
+              <item name="qbook" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="XMS" type="b2602c69:ProjectViewProjectNode" />
+              <item name="XMS" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="XMS" type="b2602c69:ProjectViewProjectNode" />
+              <item name="XMS" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="XMS" type="b2602c69:ProjectViewProjectNode" />
+              <item name="XMS" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="qaelum" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="XMS" type="b2602c69:ProjectViewProjectNode" />
+              <item name="XMS" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="qaelum" type="462c0819:PsiDirectoryNode" />
+              <item name="model" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="XMS" type="b2602c69:ProjectViewProjectNode" />
+              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
+            </path>
+            <path>
+              <item name="XMS" type="b2602c69:ProjectViewProjectNode" />
+              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
+              <item name="Maven: com.vaadin:vaadin-server:8.3.1" type="70bed36:NamedLibraryElementNode" />
+            </path>
+            <path>
+              <item name="XMS" type="b2602c69:ProjectViewProjectNode" />
+              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
+              <item name="Maven: com.vaadin:vaadin-server:8.3.1" type="70bed36:NamedLibraryElementNode" />
+              <item name="vaadin-server-8.3.1.jar" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="XMS" type="b2602c69:ProjectViewProjectNode" />
+              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
+              <item name="Maven: com.vaadin:vaadin-server:8.3.1" type="70bed36:NamedLibraryElementNode" />
+              <item name="vaadin-server-8.3.1.jar" type="462c0819:PsiDirectoryNode" />
+              <item name="vaadin" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="XMS" type="b2602c69:ProjectViewProjectNode" />
+              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
+              <item name="Maven: com.vaadin:vaadin-server:8.3.1" type="70bed36:NamedLibraryElementNode" />
+              <item name="vaadin-server-8.3.1.jar" type="462c0819:PsiDirectoryNode" />
+              <item name="vaadin" type="462c0819:PsiDirectoryNode" />
+              <item name="data" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="XMS" type="b2602c69:ProjectViewProjectNode" />
+              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
+              <item name="Maven: com.vaadin:vaadin-server:8.3.1" type="70bed36:NamedLibraryElementNode" />
+              <item name="vaadin-server-8.3.1.jar" type="462c0819:PsiDirectoryNode" />
+              <item name="vaadin" type="462c0819:PsiDirectoryNode" />
+              <item name="event" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
         </subPane>
       </pane>
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="aspect.path.notification.shown" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="SearchEverywhereHistoryKey" value="&#9;FILE&#9;file://D:/workspace_EIN/TreeDnD/src/main/java/com/qaelum/dms/ui/view/ViewManager.java&#10;S3Test&#9;FILE&#9;file://D:/workspace_EIN/TreeDnD/src/test/java/com/qaelum/qbook/model/S3Test.java&#10;DmsWikiView&#9;FILE&#9;file://D:/workspace_EIN/TreeDnD/src/main/java/com/qaelum/dms/ui/view/qbook/DmsWikiView.java&#10;SplitRightView&#9;FILE&#9;file://D:/workspace_EIN/TreeDnD/src/main/java/com/qaelum/dms/ui/view/home/SplitRightView.java&#10;S3TreeView&#9;FILE&#9;file://D:/workspace_EIN/TreeDnD/src/main/java/com/qaelum/dms/ui/view/qbook/S3TreeView.java&#10;DmsTreeView&#9;FILE&#9;file://D:/workspace_EIN/TreeDnD/src/main/java/com/qaelum/dms/ui/view/qbook/DmsTreeView.java&#10;DmsFile&#9;FILE&#9;file://D:/workspace_EIN/TreeDnD/src/main/java/com/qaelum/dms/ui/model/DmsFile.java&#10;DmsFileDa&#9;PSI&#9;JAVA://com.qaelum.dms.domain.dao.impl.DmsFileDAO&#10;DmsF&#9;FILE&#9;file://D:/workspace_EIN/TreeDnD/src/main/java/com/qaelum/dms/commons/dto/IDmsFileDTO.java&#10;dmswiki&#9;PSI&#9;JAVA://com.qaelum.dms.ui.view.qbook.DmsWikiView&#10;Rand&#9;PSI&#9;JAVA://java.util.Random" />
-    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
+    <property name="settings.editor.selected.configurable" value="preferences.keymap" />
   </component>
   <component name="RecentsManager">
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
@@ -834,34 +652,41 @@
       <recent name="D:\workspace_EIN\TreeDnD\src\main\java\com\qaelum\dms\domain" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.S3Test">
-    <configuration default="false" name="CoachUtilTest.testWriteCoachProjectFile" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
-        <pattern>
-          <option name="PATTERN" value="com.qaelum.coach.model.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <module name="TreeDnD" />
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager" selected="Maven.vaadin-playground [jetty:run]">
+    <configuration default="true" type="Applet" factoryName="Applet">
+      <option name="HTML_USED" value="false" />
+      <option name="WIDTH" value="400" />
+      <option name="HEIGHT" value="300" />
+      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
+      <module />
+    </configuration>
+    <configuration default="true" type="Application" factoryName="Application">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" value="com.qaelum.coach.model" />
-      <option name="MAIN_CLASS_NAME" value="com.qaelum.coach.model.CoachUtilTest" />
-      <option name="METHOD_NAME" value="testWriteCoachProjectFile" />
-      <option name="TEST_OBJECT" value="method" />
-      <option name="VM_PARAMETERS" value="-ea" />
-      <option name="PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <option name="ENABLE_SWING_INSPECTOR" value="false" />
       <option name="ENV_VARIABLES" />
       <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="singleModule" />
-      </option>
+      <module name="" />
       <envs />
-      <patterns />
-      <method />
     </configuration>
-    <configuration default="false" name="CoachProtocolTest.testConstructor" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="CoachProtocolTest.testConstructor" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
         <pattern>
           <option name="PATTERN" value="com.qaelum.coach.model.*" />
@@ -885,45 +710,20 @@
       </option>
       <envs />
       <patterns />
-      <method />
     </configuration>
-    <configuration default="false" name="vaadin-playground [jetty:run]" type="MavenRunConfiguration" factoryName="Maven" temporary="true">
-      <MavenSettings>
-        <option name="myGeneralSettings" />
-        <option name="myRunnerSettings" />
-        <option name="myRunnerParameters">
-          <MavenRunnerParameters>
-            <option name="profiles">
-              <set />
-            </option>
-            <option name="goals">
-              <list>
-                <option value="jetty:run" />
-              </list>
-            </option>
-            <option name="profilesMap">
-              <map />
-            </option>
-            <option name="resolveToWorkspace" value="false" />
-            <option name="workingDirPath" value="$PROJECT_DIR$" />
-          </MavenRunnerParameters>
-        </option>
-      </MavenSettings>
-      <method />
-    </configuration>
-    <configuration default="false" name="S3Test.testS3ReadFile" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="CoachUtilTest.testWriteCoachProjectFile" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
         <pattern>
-          <option name="PATTERN" value="com.qaelum.qbook.model.*" />
+          <option name="PATTERN" value="com.qaelum.coach.model.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
       <module name="TreeDnD" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" value="com.qaelum.qbook.model" />
-      <option name="MAIN_CLASS_NAME" value="com.qaelum.qbook.model.S3Test" />
-      <option name="METHOD_NAME" value="testS3ReadFile" />
+      <option name="PACKAGE_NAME" value="com.qaelum.coach.model" />
+      <option name="MAIN_CLASS_NAME" value="com.qaelum.coach.model.CoachUtilTest" />
+      <option name="METHOD_NAME" value="testWriteCoachProjectFile" />
       <option name="TEST_OBJECT" value="method" />
       <option name="VM_PARAMETERS" value="-ea" />
       <option name="PARAMETERS" />
@@ -935,9 +735,8 @@
       </option>
       <envs />
       <patterns />
-      <method />
     </configuration>
-    <configuration default="false" name="S3Test" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="S3Test" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
         <pattern>
           <option name="PATTERN" value="com.qaelum.qbook.model.*" />
@@ -961,13 +760,114 @@
       </option>
       <envs />
       <patterns />
-      <method />
+    </configuration>
+    <configuration name="S3Test.testS3ReadFile" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="com.qaelum.qbook.model.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <module name="TreeDnD" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="com.qaelum.qbook.model" />
+      <option name="MAIN_CLASS_NAME" value="com.qaelum.qbook.model.S3Test" />
+      <option name="METHOD_NAME" value="testS3ReadFile" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <envs />
+      <patterns />
+    </configuration>
+    <configuration default="true" type="JUnit" factoryName="JUnit">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <module name="" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="METHOD_NAME" />
+      <option name="TEST_OBJECT" value="class" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <envs />
+      <patterns />
+    </configuration>
+    <configuration name="vaadin-playground [jetty:run]" type="MavenRunConfiguration" factoryName="Maven" temporary="true">
+      <MavenSettings>
+        <option name="myGeneralSettings" />
+        <option name="myRunnerSettings" />
+        <option name="myRunnerParameters">
+          <MavenRunnerParameters>
+            <option name="profiles">
+              <set />
+            </option>
+            <option name="goals">
+              <list>
+                <option value="jetty:run" />
+              </list>
+            </option>
+            <option name="profilesMap">
+              <map />
+            </option>
+            <option name="resolveToWorkspace" value="false" />
+            <option name="workingDirPath" value="$PROJECT_DIR$" />
+          </MavenRunnerParameters>
+        </option>
+      </MavenSettings>
+    </configuration>
+    <configuration default="true" type="Remote" factoryName="Remote">
+      <option name="USE_SOCKET_TRANSPORT" value="true" />
+      <option name="SERVER_MODE" value="false" />
+      <option name="SHMEM_ADDRESS" value="javadebug" />
+      <option name="HOST" value="localhost" />
+      <option name="PORT" value="5005" />
+    </configuration>
+    <configuration default="true" type="TestNG" factoryName="TestNG">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <module name="" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="SUITE_NAME" />
+      <option name="PACKAGE_NAME" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="METHOD_NAME" />
+      <option name="GROUP_NAME" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <option name="OUTPUT_DIRECTORY" />
+      <option name="ANNOTATION_TYPE" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <option name="USE_DEFAULT_REPORTERS" value="false" />
+      <option name="PROPERTIES_FILE" />
+      <envs />
+      <properties />
+      <listeners />
     </configuration>
     <configuration default="true" type="#org.jetbrains.idea.devkit.run.PluginConfigurationType" factoryName="Plugin">
       <module name="" />
       <option name="VM_PARAMETERS" value="-Xmx512m -Xms256m -XX:MaxPermSize=250m -ea" />
       <option name="PROGRAM_PARAMETERS" />
-      <method />
+      <predefined_log_file id="idea.log" enabled="true" />
     </configuration>
     <configuration default="true" type="AndroidRunConfigurationType" factoryName="Android Application">
       <module name="" />
@@ -1014,29 +914,6 @@
       <Profilers>
         <option name="GAPID_DISABLE_PCS" value="false" />
       </Profilers>
-      <method />
-    </configuration>
-    <configuration default="true" type="Applet" factoryName="Applet">
-      <option name="HTML_USED" value="false" />
-      <option name="WIDTH" value="400" />
-      <option name="HEIGHT" value="300" />
-      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
-      <module />
-      <method />
-    </configuration>
-    <configuration default="true" type="Application" factoryName="Application">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="VM_PARAMETERS" />
-      <option name="PROGRAM_PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="ENABLE_SWING_INSPECTOR" value="false" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <module name="" />
-      <envs />
       <method />
     </configuration>
     <configuration default="true" type="ArquillianJUnit" factoryName="">
@@ -1194,27 +1071,6 @@
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <method />
     </configuration>
-    <configuration default="true" type="JUnit" factoryName="JUnit">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
-      <module name="" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="METHOD_NAME" />
-      <option name="TEST_OBJECT" value="class" />
-      <option name="VM_PARAMETERS" value="-ea" />
-      <option name="PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="singleModule" />
-      </option>
-      <envs />
-      <patterns />
-      <method />
-    </configuration>
     <configuration default="true" type="JUnitTestDiscovery" factoryName="JUnit Test Discovery" changeList="All">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <module name="" />
@@ -1307,46 +1163,10 @@
       </MavenSettings>
       <method />
     </configuration>
-    <configuration default="true" type="Remote" factoryName="Remote">
-      <option name="USE_SOCKET_TRANSPORT" value="true" />
-      <option name="SERVER_MODE" value="false" />
-      <option name="SHMEM_ADDRESS" value="javadebug" />
-      <option name="HOST" value="localhost" />
-      <option name="PORT" value="5005" />
-      <method />
-    </configuration>
     <configuration default="true" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <module name="" />
       <envs />
-      <method />
-    </configuration>
-    <configuration default="true" type="TestNG" factoryName="TestNG">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
-      <module name="" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="SUITE_NAME" />
-      <option name="PACKAGE_NAME" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="METHOD_NAME" />
-      <option name="GROUP_NAME" />
-      <option name="TEST_OBJECT" value="CLASS" />
-      <option name="VM_PARAMETERS" value="-ea" />
-      <option name="PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
-      <option name="OUTPUT_DIRECTORY" />
-      <option name="ANNOTATION_TYPE" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="singleModule" />
-      </option>
-      <option name="USE_DEFAULT_REPORTERS" value="false" />
-      <option name="PROPERTIES_FILE" />
-      <envs />
-      <properties />
-      <listeners />
       <method />
     </configuration>
     <configuration default="true" type="TestNGTestDiscovery" factoryName="TestNG Test Discovery" changeList="All">
@@ -1408,9 +1228,9 @@
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="JUnit.S3Test" />
-        <item index="1" class="java.lang.String" itemvalue="JUnit.S3Test.testS3ReadFile" />
-        <item index="2" class="java.lang.String" itemvalue="Maven.vaadin-playground [jetty:run]" />
+        <item index="0" class="java.lang.String" itemvalue="Maven.vaadin-playground [jetty:run]" />
+        <item index="1" class="java.lang.String" itemvalue="JUnit.S3Test" />
+        <item index="2" class="java.lang.String" itemvalue="JUnit.S3Test.testS3ReadFile" />
         <item index="3" class="java.lang.String" itemvalue="JUnit.CoachProtocolTest.testConstructor" />
         <item index="4" class="java.lang.String" itemvalue="JUnit.CoachUtilTest.testWriteCoachProjectFile" />
       </list>
@@ -1482,36 +1302,38 @@
     <option name="totallyTimeSpent" value="98888000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1056" extended-state="7" />
+    <frame x="1440" y="23" width="1920" height="1057" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32899022" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.16827853" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="true" content_ui="tabs" />
-      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.1108742" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3716143" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.14909478" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2662407" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2751896" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2747604" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.14232409" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32995737" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2156013" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.13578275" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.22257721" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.120469086" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24973376" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32885906" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32800853" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32995737" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32899022" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
+      <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.16827853" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
     </layout>
   </component>
   <component name="Vcs.Log.UiProperties">
@@ -1529,28 +1351,22 @@
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/test/java/com/qaelum/coach/model/CoachProtocolTest.java</url>
-          <line>25</line>
-          <properties />
-          <option name="timeStamp" value="3" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/test/java/com/qaelum/coach/model/CoachProtocolTest.java</url>
-          <line>26</line>
-          <properties />
-          <option name="timeStamp" value="4" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/com/qaelum/qbook/model/S3FileDAO.java</url>
           <line>36</line>
           <properties />
           <option name="timeStamp" value="41" />
         </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/qaelum/dms/ui/view/coach/QualityChapterView.java</url>
+          <line>51</line>
+          <properties />
+          <option name="timeStamp" value="57" />
+        </line-breakpoint>
       </breakpoints>
       <breakpoints-dialog>
         <breakpoints-dialog />
       </breakpoints-dialog>
-      <option name="time" value="45" />
+      <option name="time" value="58" />
     </breakpoint-manager>
     <watches-manager>
       <configuration name="JUnit">
@@ -1558,417 +1374,110 @@
         <watch expression="questionDict" />
         <watch expression="protocolTree" />
       </configuration>
+      <configuration name="MavenRunConfiguration">
+        <watch expression="selectedTabChangeEvent" />
+      </configuration>
     </watches-manager>
   </component>
   <component name="antWorkspaceConfiguration">
     <option name="IS_AUTOSCROLL_TO_SOURCE" value="false" />
     <option name="FILTER_TARGETS" value="false" />
   </component>
+  <component name="com.vaadin.designer2.intellij.settings.SizePresetsSettingsComponent">
+    <option name="sizePresets">
+      <list>
+        <SizePreset>
+          <option name="caption" value="Phone" />
+          <option name="height" value="568" />
+          <option name="width" value="320" />
+        </SizePreset>
+        <SizePreset>
+          <option name="caption" value="Tablet" />
+          <option name="height" value="1024" />
+          <option name="width" value="768" />
+        </SizePreset>
+        <SizePreset>
+          <option name="caption" value="Desktop" />
+          <option name="height" value="900" />
+          <option name="width" value="1440" />
+        </SizePreset>
+      </list>
+    </option>
+  </component>
+  <component name="debuggerHistoryManager">
+    <expressions id="evaluateExpression">
+      <expression>
+        <expression-string>((QualityQuestionView)selectedTabChangeEvent.getTabSheet().getSelectedTab()).getQuestionDTO()</expression-string>
+        <language-id>JAVA</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>answerDTOBinder</expression-string>
+        <language-id>JAVA</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+    </expressions>
+  </component>
+  <component name="designer2.settings">
+    <option name="autodetectServerAddress" value="true" />
+    <option name="serverIp" value="localhost" />
+  </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/qaelum/qbook/view/S3TreeView.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="770">
-          <caret line="96" column="77" selection-start-line="96" selection-start-column="73" selection-end-line="96" selection-end-column="77" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/qaelum/dms/js/components/JsState.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/qaelum/dms/ui/view/VaadinCKEditorUI.java.bak" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/qaelum/dms/commons/dto/ModuleDTO.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/qaelum/dms/ui/TabForMenu.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/qaelum/dms/domain/dao/impl/DmsFileDAO.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/qaelum/dms/domain/dao/datasource/DmsOracleDAOFactory.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/qaelum/dms/domain/dao/impl/oracle/OracleDmsFileDAO.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/qaelum/dms/ui/view/test/TreeView.java" />
-    <entry file="uml://MAVEN/com.qaelum.coach:vaadin-playground:1.0-SNAPSHOT">
-      <provider selected="true" editor-type-id="UmlEditorProvider">
-        <state>
-          <ID>MAVEN</ID>
-          <OriginalElement>com.qaelum.coach:vaadin-playground:1.0-SNAPSHOT</OriginalElement>
-          <nodes>
-            <node x="0.0" y="481.875">com.qaelum.coach:vaadin-playground:1.0-SNAPSHOT</node>
-            <node x="235.0" y="245.0">javax.servlet:javax.servlet-api:jar:3.0.1</node>
-            <node x="241.5" y="100.12021531100464">com.vaadin:vaadin-server:jar:8.3.1</node>
-            <node x="453.0" y="140.0">com.vaadin:vaadin-server:jar:8.3.1/com.vaadin:vaadin-sass-compiler:jar:0.9.13</node>
-            <node x="720.0" y="175.0">com.vaadin:vaadin-server:jar:8.3.1/com.vaadin:vaadin-sass-compiler:jar:0.9.13/org.w3c.css:sac:jar:1.3</node>
-            <node x="716.5" y="105.0">com.vaadin:vaadin-server:jar:8.3.1/com.vaadin:vaadin-sass-compiler:jar:0.9.13/com.vaadin.external.flute:flute:jar:1.3.0.gg2</node>
-            <node x="472.0" y="70.0">com.vaadin:vaadin-server:jar:8.3.1/com.vaadin:vaadin-shared:jar:8.3.1</node>
-            <node x="495.0" y="0.0">com.vaadin:vaadin-server:jar:8.3.1/org.jsoup:jsoup:jar:1.11.2</node>
-            <node x="487.5" y="266.9817583732058">com.vaadin:vaadin-server:jar:8.3.1/com.vaadin.external:gentyref:jar:1.2.0.vaadin1</node>
-            <node x="244.0" y="691.875">com.vaadin:vaadin-push:jar:8.3.1</node>
-            <node x="454.5" y="691.875">com.vaadin:vaadin-push:jar:8.3.1/com.vaadin.external.atmosphere:atmosphere-runtime:jar:2.4.11.vaadin2</node>
-            <node x="681.5" y="691.875">com.vaadin:vaadin-push:jar:8.3.1/com.vaadin.external.atmosphere:atmosphere-runtime:jar:2.4.11.vaadin2/com.vaadin.external.slf4j:vaadin-slf4j-jdk14:jar:1.6.1</node>
-            <node x="215.0" y="315.0">com.vaadin:vaadin-client-compiled:jar:8.3.1</node>
-            <node x="237.5" y="621.875">com.vaadin:vaadin-themes:jar:8.3.1</node>
-            <node x="265.0" y="481.875">junit:junit:jar:4.8.1</node>
-            <node x="242.5" y="551.875">commons-io:commons-io:jar:1.3.2</node>
-            <node x="256.5" y="831.875">com.thoughtworks.xstream:xstream:jar:1.4.10</node>
-            <node x="490.0" y="818.8567583732058">com.thoughtworks.xstream:xstream:jar:1.4.10/xmlpull:xmlpull:jar:1.1.3.1</node>
-            <node x="484.0" y="888.8567583732058">com.thoughtworks.xstream:xstream:jar:1.4.10/xpp3:xpp3_min:jar:1.1.4c</node>
-            <node x="234.5" y="411.875">com.amazonaws:aws-java-sdk-s3:jar:1.11.285</node>
-            <node x="461.5" y="411.875">com.amazonaws:aws-java-sdk-s3:jar:1.11.285/com.amazonaws:aws-java-sdk-kms:jar:1.11.285</node>
-            <node x="680.0" y="521.0047846889953">com.amazonaws:aws-java-sdk-s3:jar:1.11.285/com.amazonaws:aws-java-sdk-core:jar:1.11.285</node>
-            <node x="907.5" y="554.375">com.amazonaws:aws-java-sdk-s3:jar:1.11.285/com.amazonaws:aws-java-sdk-core:jar:1.11.285/commons-logging:commons-logging:jar:1.1.3</node>
-            <node x="932.0" y="727.6067583732058">com.amazonaws:aws-java-sdk-s3:jar:1.11.285/com.amazonaws:aws-java-sdk-core:jar:1.11.285/org.apache.httpcomponents:httpclient:jar:4.5.2</node>
-            <node x="1169.5" y="826.875">com.amazonaws:aws-java-sdk-s3:jar:1.11.285/com.amazonaws:aws-java-sdk-core:jar:1.11.285/org.apache.httpcomponents:httpclient:jar:4.5.2/org.apache.httpcomponents:httpcore:jar:4.4.4</node>
-            <node x="1142.0" y="756.875">com.amazonaws:aws-java-sdk-s3:jar:1.11.285/com.amazonaws:aws-java-sdk-core:jar:1.11.285/org.apache.httpcomponents:httpclient:jar:4.5.2/commons-logging:commons-logging:jar:1.2</node>
-            <node x="1146.5" y="686.875">com.amazonaws:aws-java-sdk-s3:jar:1.11.285/com.amazonaws:aws-java-sdk-core:jar:1.11.285/org.apache.httpcomponents:httpclient:jar:4.5.2/commons-codec:commons-codec:jar:1.9</node>
-            <node x="936.0" y="484.375">com.amazonaws:aws-java-sdk-s3:jar:1.11.285/com.amazonaws:aws-java-sdk-core:jar:1.11.285/software.amazon.ion:ion-java:jar:1.0.2</node>
-            <node x="911.5" y="344.375">com.amazonaws:aws-java-sdk-s3:jar:1.11.285/com.amazonaws:aws-java-sdk-core:jar:1.11.285/com.fasterxml.jackson.core:jackson-databind:jar:2.6.7.1</node>
-            <node x="1138.0" y="336.875">com.amazonaws:aws-java-sdk-s3:jar:1.11.285/com.amazonaws:aws-java-sdk-core:jar:1.11.285/com.fasterxml.jackson.core:jackson-databind:jar:2.6.7.1/com.fasterxml.jackson.core:jackson-annotations:jar:2.6.0</node>
-            <node x="1158.0" y="616.875">com.amazonaws:aws-java-sdk-s3:jar:1.11.285/com.amazonaws:aws-java-sdk-core:jar:1.11.285/com.fasterxml.jackson.core:jackson-databind:jar:2.6.7.1/com.fasterxml.jackson.core:jackson-core:jar:2.6.7</node>
-            <node x="891.0" y="624.375">com.amazonaws:aws-java-sdk-s3:jar:1.11.285/com.amazonaws:aws-java-sdk-core:jar:1.11.285/com.fasterxml.jackson.dataformat:jackson-dataformat-cbor:jar:2.6.7</node>
-            <node x="931.5" y="414.375">com.amazonaws:aws-java-sdk-s3:jar:1.11.285/com.amazonaws:aws-java-sdk-core:jar:1.11.285/joda-time:joda-time:jar:2.8.1</node>
-            <node x="691.0" y="336.875">com.amazonaws:aws-java-sdk-s3:jar:1.11.285/com.amazonaws:jmespath-java:jar:1.11.285</node>
-            <node x="255.5" y="175.0">org.vaadin.alump:ckeditor:jar:0.1.2</node>
-            <node x="242.5" y="761.875">commons-io:commons-io:jar:2.5</node>
-          </nodes>
-          <notes />
-          <edges>
-            <edge source="com.amazonaws:aws-java-sdk-s3:jar:1.11.285/com.amazonaws:aws-java-sdk-core:jar:1.11.285" target="com.amazonaws:aws-java-sdk-s3:jar:1.11.285/com.amazonaws:aws-java-sdk-core:jar:1.11.285/joda-time:joda-time:jar:2.8.1">
-              <point x="65.5" y="-7.5" />
-              <point x="891.0" y="429.375" />
-              <point x="-43.0" y="-0.0" />
-            </edge>
-            <edge source="com.thoughtworks.xstream:xstream:jar:1.4.10" target="com.thoughtworks.xstream:xstream:jar:1.4.10/xpp3:xpp3_min:jar:1.1.4c">
-              <point x="37.5" y="7.5" />
-              <point x="373.0" y="854.375" />
-              <point x="453.0" y="903.8567583732058" />
-              <point x="-42.5" y="-0.0" />
-            </edge>
-            <edge source="com.qaelum.coach:vaadin-playground:1.0-SNAPSHOT" target="com.amazonaws:aws-java-sdk-s3:jar:1.11.285">
-              <point x="67.5" y="-2.727272727272748" />
-              <point x="215.0" y="426.875" />
-              <point x="-59.5" y="-0.0" />
-            </edge>
-            <edge source="com.vaadin:vaadin-server:jar:8.3.1/com.vaadin:vaadin-sass-compiler:jar:0.9.13" target="com.vaadin:vaadin-server:jar:8.3.1/com.vaadin:vaadin-sass-compiler:jar:0.9.13/org.w3c.css:sac:jar:1.3">
-              <point x="73.5" y="7.5" />
-              <point x="680.0" y="190.0" />
-              <point x="-25.5" y="-0.0" />
-            </edge>
-            <edge source="com.amazonaws:aws-java-sdk-s3:jar:1.11.285" target="com.amazonaws:aws-java-sdk-s3:jar:1.11.285/com.amazonaws:jmespath-java:jar:1.11.285">
-              <point x="59.5" y="-10.0" />
-              <point x="373.0" y="416.875" />
-              <point x="453.0" y="342.875" />
-              <point x="-54.5" y="-7.5" />
-            </edge>
-            <edge source="com.qaelum.coach:vaadin-playground:1.0-SNAPSHOT" target="com.vaadin:vaadin-client-compiled:jar:8.3.1">
-              <point x="67.5" y="-5.454545454545439" />
-              <point x="-79.0" y="-0.0" />
-            </edge>
-            <edge source="com.amazonaws:aws-java-sdk-s3:jar:1.11.285/com.amazonaws:aws-java-sdk-core:jar:1.11.285/org.apache.httpcomponents:httpclient:jar:4.5.2" target="com.amazonaws:aws-java-sdk-s3:jar:1.11.285/com.amazonaws:aws-java-sdk-core:jar:1.11.285/org.apache.httpcomponents:httpclient:jar:4.5.2/commons-codec:commons-codec:jar:1.9">
-              <point x="42.5" y="-10.0" />
-              <point x="1058.0" y="732.6067583732058" />
-              <point x="-62.5" y="-0.0" />
-            </edge>
-            <edge source="com.amazonaws:aws-java-sdk-s3:jar:1.11.285/com.amazonaws:aws-java-sdk-core:jar:1.11.285" target="com.amazonaws:aws-java-sdk-s3:jar:1.11.285/com.amazonaws:aws-java-sdk-core:jar:1.11.285/org.apache.httpcomponents:httpclient:jar:4.5.2">
-              <point x="65.5" y="12.5" />
-              <point x="891.0" y="742.6067583732058" />
-              <point x="-42.5" y="-0.0" />
-            </edge>
-            <edge source="com.qaelum.coach:vaadin-playground:1.0-SNAPSHOT" target="javax.servlet:javax.servlet-api:jar:3.0.1">
-              <point x="67.5" y="-8.181818181818187" />
-              <point x="215.0" y="260.0" />
-              <point x="-59.0" y="-0.0" />
-            </edge>
-            <edge source="com.amazonaws:aws-java-sdk-s3:jar:1.11.285/com.amazonaws:aws-java-sdk-core:jar:1.11.285/org.apache.httpcomponents:httpclient:jar:4.5.2" target="com.amazonaws:aws-java-sdk-s3:jar:1.11.285/com.amazonaws:aws-java-sdk-core:jar:1.11.285/org.apache.httpcomponents:httpclient:jar:4.5.2/org.apache.httpcomponents:httpcore:jar:4.4.4">
-              <point x="42.5" y="10.0" />
-              <point x="1058.0" y="752.6067583732058" />
-              <point x="1138.0" y="841.875" />
-              <point x="-39.5" y="-0.0" />
-            </edge>
-            <edge source="com.vaadin:vaadin-push:jar:8.3.1/com.vaadin.external.atmosphere:atmosphere-runtime:jar:2.4.11.vaadin2" target="com.vaadin:vaadin-push:jar:8.3.1/com.vaadin.external.atmosphere:atmosphere-runtime:jar:2.4.11.vaadin2/com.vaadin.external.slf4j:vaadin-slf4j-jdk14:jar:1.6.1">
-              <point x="72.0" y="-0.0" />
-              <point x="-64.0" y="-0.0" />
-            </edge>
-            <edge source="com.amazonaws:aws-java-sdk-s3:jar:1.11.285/com.amazonaws:aws-java-sdk-core:jar:1.11.285/com.fasterxml.jackson.core:jackson-databind:jar:2.6.7.1" target="com.amazonaws:aws-java-sdk-s3:jar:1.11.285/com.amazonaws:aws-java-sdk-core:jar:1.11.285/com.fasterxml.jackson.core:jackson-databind:jar:2.6.7.1/com.fasterxml.jackson.core:jackson-core:jar:2.6.7">
-              <point x="63.0" y="7.5" />
-              <point x="1058.0" y="366.875" />
-              <point x="1138.0" y="624.375" />
-              <point x="-51.0" y="-7.5" />
-            </edge>
-            <edge source="com.vaadin:vaadin-server:jar:8.3.1" target="com.vaadin:vaadin-server:jar:8.3.1/com.vaadin:vaadin-shared:jar:8.3.1">
-              <point x="52.5" y="-3.75" />
-              <point x="373.0" y="111.37021531100464" />
-              <point x="453.0" y="85.0" />
-              <point x="-54.5" y="-0.0" />
-            </edge>
-            <edge source="com.qaelum.coach:vaadin-playground:1.0-SNAPSHOT" target="com.vaadin:vaadin-push:jar:8.3.1">
-              <point x="67.5" y="8.181818181818187" />
-              <point x="215.0" y="706.875" />
-              <point x="-50.0" y="-0.0" />
-            </edge>
-            <edge source="com.qaelum.coach:vaadin-playground:1.0-SNAPSHOT" target="com.vaadin:vaadin-server:jar:8.3.1">
-              <point x="67.5" y="-13.636363636363626" />
-              <point x="215.0" y="115.12021531100464" />
-              <point x="-52.5" y="-0.0" />
-            </edge>
-            <edge source="com.vaadin:vaadin-push:jar:8.3.1" target="com.vaadin:vaadin-push:jar:8.3.1/com.vaadin.external.atmosphere:atmosphere-runtime:jar:2.4.11.vaadin2">
-              <point x="50.0" y="-0.0" />
-              <point x="-72.0" y="-0.0" />
-            </edge>
-            <edge source="com.amazonaws:aws-java-sdk-s3:jar:1.11.285" target="com.amazonaws:aws-java-sdk-s3:jar:1.11.285/com.amazonaws:aws-java-sdk-core:jar:1.11.285">
-              <point x="59.5" y="10.0" />
-              <point x="373.0" y="436.875" />
-              <point x="453.0" y="545.0047846889953" />
-              <point x="-65.5" y="7.5" />
-            </edge>
-            <edge source="com.amazonaws:aws-java-sdk-s3:jar:1.11.285" target="com.amazonaws:aws-java-sdk-s3:jar:1.11.285/com.amazonaws:aws-java-sdk-kms:jar:1.11.285">
-              <point x="59.5" y="-0.0" />
-              <point x="-65.0" y="-0.0" />
-            </edge>
-            <edge source="com.amazonaws:aws-java-sdk-s3:jar:1.11.285/com.amazonaws:aws-java-sdk-core:jar:1.11.285" target="com.amazonaws:aws-java-sdk-s3:jar:1.11.285/com.amazonaws:aws-java-sdk-core:jar:1.11.285/com.fasterxml.jackson.core:jackson-databind:jar:2.6.7.1">
-              <point x="65.5" y="-12.5" />
-              <point x="891.0" y="366.875" />
-              <point x="-63.0" y="7.5" />
-            </edge>
-            <edge source="com.vaadin:vaadin-server:jar:8.3.1" target="com.vaadin:vaadin-server:jar:8.3.1/org.jsoup:jsoup:jar:1.11.2">
-              <point x="52.5" y="-11.25" />
-              <point x="373.0" y="103.87021531100464" />
-              <point x="453.0" y="15.0" />
-              <point x="-31.5" y="-0.0" />
-            </edge>
-            <edge source="com.amazonaws:aws-java-sdk-s3:jar:1.11.285/com.amazonaws:aws-java-sdk-core:jar:1.11.285/com.fasterxml.jackson.core:jackson-databind:jar:2.6.7.1" target="com.amazonaws:aws-java-sdk-s3:jar:1.11.285/com.amazonaws:aws-java-sdk-core:jar:1.11.285/com.fasterxml.jackson.core:jackson-databind:jar:2.6.7.1/com.fasterxml.jackson.core:jackson-annotations:jar:2.6.0">
-              <point x="63.0" y="-7.5" />
-              <point x="-71.0" y="-0.0" />
-            </edge>
-            <edge source="com.amazonaws:aws-java-sdk-s3:jar:1.11.285/com.amazonaws:aws-java-sdk-core:jar:1.11.285/com.fasterxml.jackson.dataformat:jackson-dataformat-cbor:jar:2.6.7" target="com.amazonaws:aws-java-sdk-s3:jar:1.11.285/com.amazonaws:aws-java-sdk-core:jar:1.11.285/com.fasterxml.jackson.core:jackson-databind:jar:2.6.7.1/com.fasterxml.jackson.core:jackson-core:jar:2.6.7">
-              <point x="83.5" y="-0.0" />
-              <point x="-51.0" y="7.5" />
-            </edge>
-            <edge source="com.qaelum.coach:vaadin-playground:1.0-SNAPSHOT" target="com.vaadin:vaadin-themes:jar:8.3.1">
-              <point x="67.5" y="5.454545454545439" />
-              <point x="215.0" y="636.875" />
-              <point x="-56.5" y="-0.0" />
-            </edge>
-            <edge source="com.qaelum.coach:vaadin-playground:1.0-SNAPSHOT" target="org.vaadin.alump:ckeditor:jar:0.1.2">
-              <point x="67.5" y="-10.909090909090935" />
-              <point x="215.0" y="190.0" />
-              <point x="-38.5" y="-0.0" />
-            </edge>
-            <edge source="com.qaelum.coach:vaadin-playground:1.0-SNAPSHOT" target="com.thoughtworks.xstream:xstream:jar:1.4.10">
-              <point x="67.5" y="13.636363636363626" />
-              <point x="215.0" y="846.875" />
-              <point x="-37.5" y="-0.0" />
-            </edge>
-            <edge source="com.qaelum.coach:vaadin-playground:1.0-SNAPSHOT" target="junit:junit:jar:4.8.1">
-              <point x="67.5" y="-0.0" />
-              <point x="-29.0" y="-0.0" />
-            </edge>
-            <edge source="com.amazonaws:aws-java-sdk-s3:jar:1.11.285/com.amazonaws:aws-java-sdk-core:jar:1.11.285/org.apache.httpcomponents:httpclient:jar:4.5.2/commons-logging:commons-logging:jar:1.2" target="com.amazonaws:aws-java-sdk-s3:jar:1.11.285/com.amazonaws:aws-java-sdk-core:jar:1.11.285/commons-logging:commons-logging:jar:1.1.3">
-              <point x="0.0" y="0.0" />
-              <point x="1209.0" y="569.375" />
-              <point x="0.0" y="0.0" />
-            </edge>
-            <edge source="com.amazonaws:aws-java-sdk-s3:jar:1.11.285/com.amazonaws:aws-java-sdk-core:jar:1.11.285" target="com.amazonaws:aws-java-sdk-s3:jar:1.11.285/com.amazonaws:aws-java-sdk-core:jar:1.11.285/com.fasterxml.jackson.dataformat:jackson-dataformat-cbor:jar:2.6.7">
-              <point x="65.5" y="7.5" />
-              <point x="-83.5" y="-0.0" />
-            </edge>
-            <edge source="com.amazonaws:aws-java-sdk-s3:jar:1.11.285/com.amazonaws:aws-java-sdk-core:jar:1.11.285" target="com.amazonaws:aws-java-sdk-s3:jar:1.11.285/com.amazonaws:aws-java-sdk-core:jar:1.11.285/software.amazon.ion:ion-java:jar:1.0.2">
-              <point x="65.5" y="-2.5" />
-              <point x="891.0" y="499.375" />
-              <point x="-38.5" y="-0.0" />
-            </edge>
-            <edge source="com.qaelum.coach:vaadin-playground:1.0-SNAPSHOT" target="commons-io:commons-io:jar:2.5">
-              <point x="67.5" y="10.909090909090878" />
-              <point x="215.0" y="776.875" />
-              <point x="-51.5" y="-0.0" />
-            </edge>
-            <edge source="com.thoughtworks.xstream:xstream:jar:1.4.10" target="com.thoughtworks.xstream:xstream:jar:1.4.10/xmlpull:xmlpull:jar:1.1.3.1">
-              <point x="37.5" y="-7.5" />
-              <point x="373.0" y="839.375" />
-              <point x="453.0" y="833.8567583732058" />
-              <point x="-36.5" y="-0.0" />
-            </edge>
-            <edge source="com.qaelum.coach:vaadin-playground:1.0-SNAPSHOT" target="commons-io:commons-io:jar:1.3.2">
-              <point x="67.5" y="2.727272727272748" />
-              <point x="215.0" y="566.875" />
-              <point x="-51.5" y="-0.0" />
-            </edge>
-            <edge source="com.amazonaws:aws-java-sdk-s3:jar:1.11.285/com.amazonaws:aws-java-sdk-kms:jar:1.11.285" target="com.amazonaws:aws-java-sdk-s3:jar:1.11.285/com.amazonaws:aws-java-sdk-core:jar:1.11.285">
-              <point x="65.0" y="7.5" />
-              <point x="-65.5" y="-7.5" />
-            </edge>
-            <edge source="com.amazonaws:aws-java-sdk-s3:jar:1.11.285/com.amazonaws:aws-java-sdk-kms:jar:1.11.285" target="com.amazonaws:aws-java-sdk-s3:jar:1.11.285/com.amazonaws:jmespath-java:jar:1.11.285">
-              <point x="65.0" y="-7.5" />
-              <point x="-54.5" y="7.5" />
-            </edge>
-            <edge source="com.vaadin:vaadin-server:jar:8.3.1" target="com.vaadin:vaadin-server:jar:8.3.1/com.vaadin.external:gentyref:jar:1.2.0.vaadin1">
-              <point x="52.5" y="11.25" />
-              <point x="373.0" y="126.37021531100464" />
-              <point x="453.0" y="281.9817583732058" />
-              <point x="-39.0" y="-0.0" />
-            </edge>
-            <edge source="com.vaadin:vaadin-server:jar:8.3.1/com.vaadin:vaadin-sass-compiler:jar:0.9.13" target="com.vaadin:vaadin-server:jar:8.3.1/com.vaadin:vaadin-sass-compiler:jar:0.9.13/com.vaadin.external.flute:flute:jar:1.3.0.gg2">
-              <point x="73.5" y="-7.5" />
-              <point x="680.0" y="120.0" />
-              <point x="-29.0" y="-0.0" />
-            </edge>
-            <edge source="com.vaadin:vaadin-server:jar:8.3.1" target="com.vaadin:vaadin-server:jar:8.3.1/com.vaadin:vaadin-sass-compiler:jar:0.9.13">
-              <point x="52.5" y="3.75" />
-              <point x="373.0" y="118.87021531100464" />
-              <point x="-73.5" y="-0.0" />
-            </edge>
-            <edge source="com.amazonaws:aws-java-sdk-s3:jar:1.11.285/com.amazonaws:jmespath-java:jar:1.11.285" target="com.amazonaws:aws-java-sdk-s3:jar:1.11.285/com.amazonaws:aws-java-sdk-core:jar:1.11.285/com.fasterxml.jackson.core:jackson-databind:jar:2.6.7.1">
-              <point x="54.5" y="-0.0" />
-              <point x="-63.0" y="-7.5" />
-            </edge>
-            <edge source="com.amazonaws:aws-java-sdk-s3:jar:1.11.285/com.amazonaws:aws-java-sdk-core:jar:1.11.285" target="com.amazonaws:aws-java-sdk-s3:jar:1.11.285/com.amazonaws:aws-java-sdk-core:jar:1.11.285/commons-logging:commons-logging:jar:1.1.3">
-              <point x="65.5" y="2.5" />
-              <point x="891.0" y="569.375" />
-              <point x="-67.0" y="-0.0" />
-            </edge>
-            <edge source="com.amazonaws:aws-java-sdk-s3:jar:1.11.285/com.amazonaws:aws-java-sdk-core:jar:1.11.285/org.apache.httpcomponents:httpclient:jar:4.5.2" target="com.amazonaws:aws-java-sdk-s3:jar:1.11.285/com.amazonaws:aws-java-sdk-core:jar:1.11.285/org.apache.httpcomponents:httpclient:jar:4.5.2/commons-logging:commons-logging:jar:1.2">
-              <point x="42.5" y="-0.0" />
-              <point x="1058.0" y="742.6067583732058" />
-              <point x="-67.0" y="-0.0" />
-            </edge>
-          </edges>
-          <settings layout="Hierarchic Group" zoom="0.5553846153846154" x="448.1329639889197" y="151.1329639889197" />
-          <SelectedNodes>
-            <node>com.amazonaws:aws-java-sdk-s3:jar:1.11.285/com.amazonaws:aws-java-sdk-core:jar:1.11.285/commons-logging:commons-logging:jar:1.1.3</node>
-          </SelectedNodes>
-          <Categories />
-          <VISIBILITY>All</VISIBILITY>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="346">
-          <caret line="104" column="0" selection-start-line="104" selection-start-column="0" selection-end-line="104" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/qaelum/dms/ui/view/home/SplitView.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/qaelum/dms/ui/view/home/SplitLeftView.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/qaelum/dms/ui/view/coach/CoachTreeView.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/qaelum/dms/ui/view/coach/ICoachAnswerView.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/qaelum/dms/ui/view/coach/CoachAnswerView.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/qaelum/dms/ui/view/coach/ICoachAnswerView.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/qaelum/dms/ui/view/coach/CoachAnswerView.java" />
     <entry file="file://$PROJECT_DIR$/src/main/java/com/qaelum/dms/ui/view/coach/CoachReportView.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/qaelum/dms/domain/entity/coach/CoachUtil.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/qaelum/dms/domain/entity/coach/qualityItem/QualityChapter.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/qaelum/dms/domain/entity/coach/CoachProject.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/qaelum/dms/domain/entity/coach/CoachProtocol.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/qaelum/dms/domain/entity/coach/ProtocolScheme.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/qaelum/dms/domain/entity/coach/qualityItem/QualityQuestion.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/qaelum/dms/domain/entity/coach/qualityItem/AbstractQualityItem.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/com/qaelum/coach/model/CoachProtocolTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="18" column="37" selection-start-line="18" selection-start-column="36" selection-end-line="18" selection-end-column="37" />
-          <folding>
-            <element signature="e#540#541#0" expanded="true" />
-            <element signature="e#618#619#0" expanded="true" />
-          </folding>
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/qaelum/dms/ui/view/DmsView.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="34">
-          <caret line="2" column="45" selection-start-line="2" selection-start-column="45" selection-end-line="2" selection-end-column="45" />
-          <folding />
+          <caret line="2" column="45" lean-forward="false" selection-start-line="2" selection-start-column="45" selection-end-line="2" selection-end-column="45" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/qaelum/MyUI.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="51">
-          <caret line="3" column="0" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
+          <caret line="3" column="0" lean-forward="false" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -1976,90 +1485,18 @@
     <entry file="file://$PROJECT_DIR$/src/test/java/com/qaelum/coach/model/CoachUtilTest.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="481">
-          <caret line="43" column="17" selection-start-line="43" selection-start-column="17" selection-end-line="43" selection-end-column="17" />
-          <folding>
-            <element signature="e#538#539#0" expanded="false" />
-            <element signature="e#586#587#0" expanded="false" />
-          </folding>
+          <caret line="43" column="17" lean-forward="false" selection-start-line="43" selection-start-column="17" selection-end-line="43" selection-end-column="17" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/qaelum/dms/commons/dto/QualityChapterDTO.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/qaelum/dms/commons/dto/QualityQuestionDTO.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/qaelum/dms/ui/model/coach/CoachAnswerModel.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/qaelum/dms/ui/presenter/coach/TreeAnswerPresenter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/qaelum/dms/ui/view/coach/ICoachTreeView.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="8" column="17" selection-start-line="8" selection-start-column="17" selection-end-line="8" selection-end-column="17" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/qaelum/dms/commons/dto/IDmsFileDTO.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="6" column="21" selection-start-line="6" selection-start-column="21" selection-end-line="6" selection-end-column="21" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/qaelum/dms/ui/model/qbook/S3FileDAO.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="17" column="19" selection-start-line="17" selection-start-column="19" selection-end-line="17" selection-end-column="19" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/qaelum/dms/ui/model/qbook/S3TreeStringDataProvider.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="19" column="13" selection-start-line="19" selection-start-column="13" selection-end-line="19" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/qaelum/dms/commons/dto/S3FileDTO.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="22" column="5" selection-start-line="22" selection-start-column="5" selection-end-line="22" selection-end-column="5" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/qaelum/dms/ui/model/coach/CoachAnswerModel.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/qaelum/dms/ui/presenter/coach/TreeAnswerPresenter.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/qaelum/dms/ui/model/qbook/S3FileDAO.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/qaelum/dms/ui/model/qbook/S3TreeStringDataProvider.java" />
     <entry file="file://$PROJECT_DIR$/src/test/java/com/qaelum/qbook/model/S3Test.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="34">
-          <caret line="2" column="39" selection-start-line="2" selection-start-column="39" selection-end-line="2" selection-end-column="39" />
+          <caret line="2" column="39" lean-forward="false" selection-start-line="2" selection-start-column="39" selection-end-line="2" selection-end-column="39" />
           <folding>
             <element signature="e#367#368#0" expanded="false" />
             <element signature="e#410#411#0" expanded="false" />
@@ -2070,126 +1507,314 @@
     <entry file="file://$PROJECT_DIR$/src/main/java/com/qaelum/dms/ui/model/qbook/S3TreeDataProvider.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="541">
-          <caret line="47" column="68" selection-start-line="47" selection-start-column="68" selection-end-line="47" selection-end-column="68" />
-          <folding>
-            <element signature="imports" expanded="false" />
-            <element signature="e#1476#1477#0" expanded="false" />
-            <element signature="e#1545#1546#0" expanded="false" />
-          </folding>
+          <caret line="47" column="68" lean-forward="false" selection-start-line="47" selection-start-column="68" selection-end-line="47" selection-end-column="68" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/qaelum/dms/ui/model/DmsFile.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="102">
-          <caret line="6" column="13" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
-          <folding />
+          <caret line="6" column="13" lean-forward="false" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/qaelum/dms/commons/dto/DmsFileDTO.java" />
     <entry file="file://$PROJECT_DIR$/src/main/java/com/qaelum/dms/ui/view/home/SplitRightView.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="612">
-          <caret line="45" column="13" selection-start-line="45" selection-start-column="13" selection-end-line="45" selection-end-column="13" />
+        <state relative-caret-position="525">
+          <caret line="81" column="0" lean-forward="false" selection-start-line="81" selection-start-column="0" selection-end-line="81" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/qaelum/dms/ui/view/qbook/DmsTreeView.java" />
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="641">
+          <caret line="91" column="0" lean-forward="false" selection-start-line="90" selection-start-column="0" selection-end-line="91" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/qaelum/dms/ui/view/qbook/DmsTreeView.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/qaelum/dms/ui/view/qbook/IWikiView.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="16" column="18" selection-start-line="16" selection-start-column="18" selection-end-line="16" selection-end-column="18" />
+        <state relative-caret-position="195">
+          <caret line="13" column="13" lean-forward="false" selection-start-line="13" selection-start-column="13" selection-end-line="13" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/qaelum/dms/domain/entity/coach/CoachProtocol.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1620">
+          <caret line="124" column="0" lean-forward="false" selection-start-line="124" selection-start-column="0" selection-end-line="124" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/qaelum/dms/domain/entity/coach/CoachUtil.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="14" column="99" lean-forward="false" selection-start-line="14" selection-start-column="99" selection-end-line="14" selection-end-column="99" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/qaelum/dms/commons/dto/QualityChapterDTO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-36">
+          <caret line="12" column="13" lean-forward="false" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/com/vaadin/vaadin-server/8.3.1/vaadin-server-8.3.1.jar!/com/vaadin/data/Binder.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="182">
+          <caret line="162" column="32" lean-forward="true" selection-start-line="162" selection-start-column="32" selection-end-line="162" selection-end-column="32" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/qaelum/dms/commons/dto/QuestionAnswerDTO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="2" column="13" lean-forward="false" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="e#331#332#0" expanded="true" />
+            <element signature="e#363#364#0" expanded="true" />
+            <element signature="e#399#400#0" expanded="true" />
+            <element signature="e#431#432#0" expanded="true" />
+            <element signature="e#481#482#0" expanded="true" />
+            <element signature="e#523#524#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/qaelum/dms/commons/dto/DmsFileDTO.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/qaelum/dms/ui/presenter/qbook/DmsTreePresenter.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="188">
-          <caret line="12" column="35" selection-start-line="12" selection-start-column="35" selection-end-line="12" selection-end-column="35" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state relative-caret-position="270">
+          <caret line="22" column="0" lean-forward="true" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/qaelum/dms/ui/view/ViewManager.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="176">
-          <caret line="32" column="15" selection-start-line="32" selection-start-column="15" selection-end-line="32" selection-end-column="15" />
+        <state relative-caret-position="486">
+          <caret line="62" column="101" lean-forward="false" selection-start-line="62" selection-start-column="101" selection-end-line="62" selection-end-column="101" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/qaelum/dms/ui/view/qbook/WikiSub.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="15" column="12" selection-start-line="15" selection-start-column="12" selection-end-line="15" selection-end-column="12" />
+        <state relative-caret-position="180">
+          <caret line="14" column="12" lean-forward="false" selection-start-line="14" selection-start-column="12" selection-end-line="14" selection-end-column="12" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/qaelum/dms/ui/view/qbook/WikiView.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="214">
+          <caret line="78" column="38" lean-forward="false" selection-start-line="78" selection-start-column="38" selection-end-line="78" selection-end-column="38" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/qaelum/dms/ui/view/qbook/IDmsTreeView.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="19" column="21" lean-forward="false" selection-start-line="19" selection-start-column="21" selection-end-line="19" selection-end-column="21" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/qaelum/dms/domain/dao/IDmsFileDAO.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="408">
-          <caret line="24" column="12" selection-start-line="24" selection-start-column="12" selection-end-line="24" selection-end-column="12" />
+        <state relative-caret-position="375">
+          <caret line="25" column="12" lean-forward="false" selection-start-line="25" selection-start-column="12" selection-end-line="25" selection-end-column="12" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="imports" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/qaelum/dms/ui/view/qbook/WikiView.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/qaelum/dms/commons/dto/IDmsFileDTO.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="631">
-          <caret line="85" column="21" selection-start-line="85" selection-start-column="21" selection-end-line="85" selection-end-column="21" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#1996#1997#0" expanded="true" />
-            <element signature="e#2035#2036#0" expanded="true" />
-            <element signature="e#2421#2422#0" expanded="true" />
-            <element signature="e#2472#2473#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/qaelum/dms/ui/view/qbook/IWikiView.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="13" column="13" selection-start-line="13" selection-start-column="13" selection-end-line="13" selection-end-column="13" />
+        <state relative-caret-position="135">
+          <caret line="9" column="18" lean-forward="false" selection-start-line="9" selection-start-column="18" selection-end-line="9" selection-end-column="18" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/qaelum/dms/ui/presenter/qbook/WikiViewPresenter.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="340">
-          <caret line="20" column="35" selection-start-line="20" selection-start-column="35" selection-end-line="20" selection-end-column="35" />
+        <state relative-caret-position="300">
+          <caret line="20" column="35" lean-forward="false" selection-start-line="20" selection-start-column="35" selection-end-line="20" selection-end-column="35" />
           <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/qaelum/dms/domain/dao/S3DAO.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="744">
-          <caret line="152" column="10" selection-start-line="152" selection-start-column="10" selection-end-line="154" selection-end-column="9" />
-          <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="imports" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/qaelum/dms/ui/view/qbook/S3TreeView.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="373">
-          <caret line="125" column="72" selection-start-line="125" selection-start-column="72" selection-end-line="125" selection-end-column="72" />
+        <state relative-caret-position="1365">
+          <caret line="108" column="29" lean-forward="false" selection-start-line="108" selection-start-column="29" selection-end-line="108" selection-end-column="29" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/qaelum/dms/ui/presenter/coach/CoachChapterPresenter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="15" column="33" lean-forward="false" selection-start-line="15" selection-start-column="33" selection-end-line="15" selection-end-column="33" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/qaelum/dms/commons/dto/QualityQuestionDTO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="494">
+          <caret line="78" column="45" lean-forward="false" selection-start-line="78" selection-start-column="45" selection-end-line="78" selection-end-column="45" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#1090#1091#0" expanded="true" />
+            <element signature="e#1130#1131#0" expanded="true" />
+            <element signature="e#1177#1178#0" expanded="true" />
+            <element signature="e#1209#1210#0" expanded="true" />
+            <element signature="e#1456#1457#0" expanded="true" />
+            <element signature="e#1498#1499#0" expanded="true" />
+            <element signature="e#1822#1823#0" expanded="true" />
+            <element signature="e#1883#1884#0" expanded="true" />
+            <element signature="e#1925#1926#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/qaelum/dms/domain/dao/ICoachProjectDAO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="15" column="29" lean-forward="true" selection-start-line="15" selection-start-column="29" selection-end-line="15" selection-end-column="29" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/qaelum/dms/ui/presenter/TreesPresenter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="375">
+          <caret line="31" column="78" lean-forward="false" selection-start-line="31" selection-start-column="78" selection-end-line="31" selection-end-column="78" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/qaelum/dms/domain/dao/S3DAO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1489">
+          <caret line="62" column="38" lean-forward="false" selection-start-line="62" selection-start-column="38" selection-end-line="62" selection-end-column="38" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/qaelum/dms/commons/dto/S3FileDTO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="14">
+          <caret line="22" column="15" lean-forward="false" selection-start-line="22" selection-start-column="15" selection-end-line="22" selection-end-column="15" />
+          <folding>
+            <element signature="e#451#452#0" expanded="false" />
+            <element signature="e#487#488#0" expanded="false" />
+            <element signature="e#522#523#0" expanded="false" />
+            <element signature="e#553#554#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/com/vaadin/vaadin-server/8.3.1/vaadin-server-8.3.1.jar!/com/vaadin/event/ListenerMethod.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="201">
+          <caret line="224" column="0" lean-forward="false" selection-start-line="224" selection-start-column="0" selection-end-line="224" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/com/qaelum/coach/model/CoachProtocolTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="285">
+          <caret line="26" column="0" lean-forward="false" selection-start-line="26" selection-start-column="0" selection-end-line="26" selection-end-column="0" />
+          <folding>
+            <element signature="e#540#541#0" expanded="true" />
+            <element signature="e#618#619#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/qaelum/dms/ui/view/coach/QualityChapterView.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="243">
+          <caret line="52" column="34" lean-forward="false" selection-start-line="52" selection-start-column="34" selection-end-line="52" selection-end-column="34" />
+          <folding>
+            <element signature="e#3657#3658#0" expanded="true" />
+            <element signature="e#3699#3700#0" expanded="true" />
+            <element signature="e#3899#3900#0" expanded="true" />
+            <element signature="e#3938#3939#0" expanded="true" />
+            <element signature="e#6592#6593#0" expanded="true" />
+            <element signature="e#6635#6636#0" expanded="true" />
+            <element signature="e#6685#6686#0" expanded="true" />
+            <element signature="e#6719#6720#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/qaelum/dms/ui/view/coach/ICoachChapterView.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="405">
+          <caret line="29" column="21" lean-forward="false" selection-start-line="29" selection-start-column="21" selection-end-line="29" selection-end-column="21" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/qaelum/dms/ui/presenter/coach/TreeChapterPresenter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="504">
+          <caret line="86" column="30" lean-forward="false" selection-start-line="86" selection-start-column="30" selection-end-line="86" selection-end-column="30" />
+          <folding>
+            <element signature="e#3431#3432#0" expanded="true" />
+            <element signature="e#3499#3500#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/qaelum/dms/ui/view/coach/ICoachTreeView.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="12" column="9" lean-forward="false" selection-start-line="12" selection-start-column="9" selection-end-line="12" selection-end-column="9" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/qaelum/dms/domain/dao/CoachProjectDAO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="489">
+          <caret line="74" column="53" lean-forward="false" selection-start-line="74" selection-start-column="53" selection-end-line="74" selection-end-column="53" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#2989#2990#0" expanded="true" />
+            <element signature="e#3041#3042#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/qaelum/dms/ui/view/coach/CoachTreeView.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="168">
+          <caret line="63" column="3" lean-forward="false" selection-start-line="63" selection-start-column="3" selection-end-line="80" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -2204,7 +1829,6 @@
             <option name="proportions">
               <list>
                 <option value="0.2" />
-                <option value="0.5" />
               </list>
             </option>
           </splitter-proportions>
@@ -2212,7 +1836,7 @@
       </state>
       <state key="FacetStructureConfigurable.UI">
         <settings>
-          <last-edited>GWT</last-edited>
+          <last-edited>Invalid</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>
@@ -2235,7 +1859,7 @@
       </state>
       <state key="JdkListConfigurable.UI">
         <settings>
-          <last-edited>1.7</last-edited>
+          <last-edited>1.8</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>

@@ -2,6 +2,7 @@ package com.qaelum.dms.ui.view.coach;
 
 import com.qaelum.dms.commons.dto.QualityChapterDTO;
 import com.qaelum.dms.commons.dto.QualityQuestionDTO;
+import com.qaelum.dms.commons.dto.QuestionAnswerDTO;
 
 /**
  * Created by Einhart on 2/14/2018.
@@ -12,6 +13,8 @@ public interface ICoachChapterView {
 
     void updateLabel(String value);
 
+    void loadQuestionAnswer(QualityQuestionDTO questionDTO, QuestionAnswerDTO answerDTO);
+
     void addListener(CoachChapterViewListener listener);
 
     /**
@@ -19,8 +22,13 @@ public interface ICoachChapterView {
      */
     interface CoachChapterViewListener {
         void buttonClick(String value);
-        void saveQuestion(QualityQuestionDTO questionDTO);
+        default void saveQuestion(QualityQuestionDTO questionDTO) {
+            //NOP
+        };
         void saveAllQuestions(QualityChapterDTO chapterDTO);
-        void selectQuestionView(String key);
+
+        default void selectQuestion(QualityQuestionDTO questionDTO) {
+            //NOP
+        };
     }
 }
