@@ -5,9 +5,15 @@ import com.qaelum.dms.domain.entity.coach.ProtocolScheme;
 import com.qaelum.dms.domain.entity.coach.qualityItem.AbstractQualityItem;
 import com.qaelum.dms.domain.entity.coach.qualityItem.QualityChapter;
 import com.qaelum.dms.domain.entity.coach.qualityItem.QualityQuestion;
+import com.vaadin.data.TreeData;
+import com.vaadin.data.provider.TreeDataProvider;
 import com.vaadin.ui.Label;
+import com.vaadin.ui.TextField;
 import com.vaadin.ui.TreeGrid;
 import com.vaadin.ui.VerticalLayout;
+import com.vaadin.ui.components.grid.HeaderRow;
+import com.vaadin.ui.renderers.ProgressBarRenderer;
+import com.vaadin.ui.themes.ValoTheme;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -19,8 +25,14 @@ public class CoachTreeView extends VerticalLayout implements ICoachTreeView{
 
     private String title = "CoachTreeView";
 
+    private static final String COL_TXT = "COL_TXT";
+    private static final String COL_PROG = "COL_PROG";
+    private static final String COL_KEY = "COL_KEY";
+
     private CoachProtocol coachProtocol;
-    private TreeGrid<AbstractQualityItem> treeGrid = null;
+    private TreeGrid<AbstractQualityItem> treeGrid;
+    private TreeData<AbstractQualityItem> data;
+    private TreeDataProvider<AbstractQualityItem> dataProvider;
 
     private List<CoachTreeViewListener> listeners = new ArrayList<>();
 
@@ -30,10 +42,10 @@ public class CoachTreeView extends VerticalLayout implements ICoachTreeView{
         CoachProtocol coachProtocol = new CoachProtocol(protocolScheme);
 
         this.coachProtocol = coachProtocol;
-        addComponent(new Label(title));
+//        addComponent(new Label(title));
 
         initCoachTree();
-        treeGrid.setSizeFull();
+
         addComponent(treeGrid);
     }
 
@@ -47,14 +59,56 @@ public class CoachTreeView extends VerticalLayout implements ICoachTreeView{
 
     private void initCoachTree() {
         treeGrid = new TreeGrid<>();
-        treeGrid.setItems(coachProtocol.getProtocolTree(), AbstractQualityItem::getItemChildren);
+        treeGrid.setSizeFull();
+        treeGrid.setHeightByRows(20);
 
-        treeGrid.addColumn(AbstractQualityItem::getItemKey).setCaption("key");
-        treeGrid.addColumn(AbstractQualityItem::getItemName).setCaption("name");
+        data = new TreeData<>();
+        data.addItems(coachProtocol.getProtocolTree(), AbstractQualityItem::getItemChildren);
+        dataProvider = new TreeDataProvider<>(data);
+        treeGrid.setDataProvider(dataProvider);
+
+//        treeGrid.setItems(coachProtocol.getProtocolTree(), AbstractQualityItem::getItemChildren);
+
+        treeGrid.addColumn(AbstractQualityItem::getItemName).setId(COL_TXT);
+        treeGrid.addColumn(qualityItem -> {return Math.random();}, new ProgressBarRenderer()).setId(COL_PROG);
+        treeGrid.addColumn(AbstractQualityItem::getItemKey).setId(COL_KEY);
+
+        setColumnFiltering();
 
         treeGrid.addItemClickListener(itemClick -> {
            clickItem(itemClick.getItem());
         });
+
+    }
+
+    private void setColumnFiltering() {
+        HeaderRow filteringHeader = treeGrid.appendHeaderRow();
+        TextField filteringField = getColumnFilterField();
+        filteringField.addValueChangeListener(valueChangeEvent -> {
+            if(valueChangeEvent.getValue() == null || valueChangeEvent.getValue().trim().isEmpty()) {
+                dataProvider.clearFilters();
+            } else {
+                dataProvider.setFilter(qualityItem -> {
+                    if (qualityItem.getItemChildren() == null || qualityItem.getItemChildren().isEmpty()) {
+                        return qualityItem.getItemName().contains(valueChangeEvent.getValue());
+                    } else {
+                        return qualityItem.flatten().anyMatch(childItem -> childItem.getItemName().contains(valueChangeEvent.getValue()));
+                    }
+                    }
+                );
+            }
+        });
+
+        filteringHeader.getCell(COL_TXT).setComponent(filteringField);
+    }
+
+    private TextField getColumnFilterField() {
+        TextField filter = new TextField();
+        filter.setWidth("100%");
+        filter.addStyleName(ValoTheme.TEXTFIELD_SMALL);
+        filter.setPlaceholder("Filter");
+        return filter;
+
     }
 
     private void clickItem(AbstractQualityItem qualityItem) {
@@ -79,12 +133,19 @@ public class CoachTreeView extends VerticalLayout implements ICoachTreeView{
 
         List<QualityQuestion> siblingQuestions = parentChapter.getQuestions();
 
-        treeGrid.expand(parentChapter);
+        recursiveExpandChapter(parentChapter);
 
         for(QualityQuestion siblingQuestion : siblingQuestions) {
             if (siblingQuestion.getItemKey().equals(key)) {
                 treeGrid.select(siblingQuestion);
             }
+        }
+    }
+
+    private void recursiveExpandChapter(AbstractQualityItem qualityItem) {
+        treeGrid.expand(qualityItem);
+        if(qualityItem.getItemParent() != null) {
+            recursiveExpandChapter(qualityItem.getItemParent());
         }
     }
 

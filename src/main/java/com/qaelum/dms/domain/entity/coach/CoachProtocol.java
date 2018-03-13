@@ -178,6 +178,7 @@ public class CoachProtocol {
             if(tempChapter == null) {
                 tempChapter = new QualityChapter(chapterKey, chapterDict.get(chapterKey));
                 qualityChapter.getSubChapters().add(tempChapter);
+                tempChapter.setItemParent(qualityChapter);
             }
             defineChapter(values, tempChapter, ++index);
         }
@@ -189,8 +190,8 @@ public class CoachProtocol {
             for(String questionKey : list) {
                 QualityQuestion qualityQuestion = questionDict.get(questionKey);
                 if(qualityQuestion != null) {
-                    qualityQuestion.setItemParent(qualityChapter);
                     qualityChapter.getQuestions().add(qualityQuestion);
+                    qualityQuestion.setItemParent(qualityChapter);
                 } else {
                     System.out.println("No question found for " + questionKey);
                 }

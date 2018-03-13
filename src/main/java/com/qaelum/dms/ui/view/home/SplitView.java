@@ -35,9 +35,13 @@ public class SplitView extends VerticalLayout {
 
     private void initLeftElement() {
         leftElement = new SplitLeftView(viewManager);
+        leftElement.setMargin(true);
+        leftElement.setSizeFull();
     }
 
     private void initRightElement() {
         rightElement = new SplitRightView(viewManager);
+        rightElement.setMargin(true);
+        rightElement.setSizeFull();
     }
 }

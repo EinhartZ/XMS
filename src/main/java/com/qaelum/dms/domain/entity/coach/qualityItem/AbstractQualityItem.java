@@ -2,6 +2,7 @@ package com.qaelum.dms.domain.entity.coach.qualityItem;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.stream.Stream;
 
 /**
  * Created by einha on 2/20/2018.
@@ -37,5 +38,12 @@ public abstract class AbstractQualityItem {
 
     public QualityChapter getItemParent() {
         return itemParent;
+    }
+
+    public Stream<AbstractQualityItem> flatten() {
+        return Stream.concat(
+                Stream.of(this),
+                itemChildren.stream().flatMap(AbstractQualityItem::flatten)
+                );
     }
 }

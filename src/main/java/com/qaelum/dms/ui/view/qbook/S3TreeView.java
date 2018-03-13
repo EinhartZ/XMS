@@ -42,6 +42,7 @@ public class S3TreeView extends VerticalLayout implements IDmsTreeView{
 
     private void initTree() {
         s3Tree = new Tree<>();
+        s3Tree.setSizeFull();
 
         S3FileDTO s3Root = new S3FileDTO("user_0001/");
 

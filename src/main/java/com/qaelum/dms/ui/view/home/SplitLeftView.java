@@ -17,14 +17,16 @@ public class SplitLeftView extends VerticalLayout {
     public SplitLeftView(ViewManager viewManager) {
         this.viewManager = viewManager;
 
-        addComponent(new Label(title));
+//        addComponent(new Label(title));
 
         initViewElement();
-        viewElement.setSizeFull();
+
         addComponent(viewElement);
     }
 
     private void initViewElement() {
         viewElement = viewManager.getCoachTreeView();
+        viewElement.setMargin(false);
+        viewElement.setSizeFull();
     }
 }

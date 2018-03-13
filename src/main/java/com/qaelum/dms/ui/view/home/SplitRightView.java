@@ -1,11 +1,6 @@
 package com.qaelum.dms.ui.view.home;
 
-import com.qaelum.dms.ui.model.coach.CoachChapterModel;
-import com.qaelum.dms.ui.presenter.coach.CoachChapterPresenter;
-import com.qaelum.dms.ui.presenter.coach.TreeChapterPresenter;
 import com.qaelum.dms.ui.view.ViewManager;
-import com.qaelum.dms.ui.view.coach.*;
-import com.qaelum.dms.ui.view.qbook.S3TreeView;
 import com.vaadin.icons.VaadinIcons;
 import com.vaadin.ui.*;
 
@@ -17,70 +12,52 @@ public class SplitRightView extends VerticalLayout {
     private ViewManager viewManager;
 
     private TabSheet tabsheet = new TabSheet();
-    private Layout activeView;
+    private VerticalLayout activeView;
 
-    private HorizontalLayout hlNavigation = new HorizontalLayout();
-
-    private Button btn_1 = new Button(VaadinIcons.FILE_TREE);
-    private Button btn_2 = new Button(VaadinIcons.ACCORDION_MENU);
-    private Button btn_3 = new Button(VaadinIcons.DIPLOMA_SCROLL);
-    private Button btn_4 = new Button(VaadinIcons.HAMMER);
+    private MenuBar menuBar = new MenuBar();
 
     public SplitRightView(ViewManager viewManager) {
         this.viewManager = viewManager;
 
-//        initTabSheetElements();
         initNavigation();
-        activeView = viewManager.getS3TreeView();
+        addComponent(menuBar);
+        setExpandRatio(menuBar, 1);
 
-        addComponent(hlNavigation);
-        setExpandRatio(hlNavigation, 1);
-        addComponent(activeView);
-        setExpandRatio(activeView, 9);
+        activeView = new VerticalLayout();
+        navigateTo(viewManager.getCoachChapterView());
     }
 
     private void initNavigation() {
-        hlNavigation.setWidth("100%");
+        menuBar.setWidth("100%");
 
-        hlNavigation.addComponent(btn_1);
-        hlNavigation.addComponent(btn_2);
-        hlNavigation.addComponent(btn_3);
-        hlNavigation.addComponent(btn_4);
-
-        btn_1.addClickListener(clickEvent -> {
-            this.removeComponent(activeView);
-            activeView = viewManager.getS3TreeView();
-            addComponent(activeView);
+        MenuBar.MenuItem itemTree = menuBar.addItem("", VaadinIcons.FILE_TREE, menuItem -> {
+            navigateTo(viewManager.getS3TreeView());
         });
 
-        btn_2.addClickListener(clickEvent -> {
-            this.removeComponent(activeView);
-            activeView = viewManager.getCoachChapterView();
-            addComponent(activeView);
+        MenuBar.MenuItem itemAcc = menuBar.addItem("", VaadinIcons.ACCORDION_MENU, menuItem -> {
+            navigateTo(viewManager.getCoachChapterView());
         });
 
-        btn_3.addClickListener(clickEvent -> {
-            this.removeComponent(activeView);
-            activeView = viewManager.getCoachReportView();
-            addComponent(activeView);
+        MenuBar.MenuItem itemReport = menuBar.addItem("", VaadinIcons.DIPLOMA_SCROLL, menuItem -> {
+            navigateTo(viewManager.getCoachReportView());
         });
 
-        btn_4.addClickListener(clickEvent -> {
-            this.removeComponent(activeView);
-            activeView = viewManager.getTestTreeView();
-            addComponent(activeView);
+        MenuBar.MenuItem itemConfig = menuBar.addItem("", VaadinIcons.HAMMER, menuItem -> {
+            navigateTo(viewManager.getTestTreeView());
         });
+
     }
 
-    private void initTabSheetElements() {
-        S3TreeView s3TreeView = viewManager.getS3TreeView();
+    private void navigateTo(VerticalLayout newView) {
+        if(newView != activeView) {
+            removeComponent(activeView);
 
-        ICoachChapterView chapterView = viewManager.getCoachChapterView();
-        CoachReportView reportView = viewManager.getCoachReportView();
+//            newView.setSizeFull();
+            newView.setMargin(false);
+            addComponent(newView);
+            setExpandRatio(newView, 10);
 
-        tabsheet.addTab(s3TreeView, "KMS²3");
-
-        tabsheet.addTab((Component) chapterView, "Chapter Details");
-        tabsheet.addTab(reportView, "Report");
+            activeView = newView;
+        }
     }
 }

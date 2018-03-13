@@ -1,5 +1,6 @@
 package com.qaelum.dms.ui.presenter.coach;
 
+import com.qaelum.dms.commons.dto.IDmsFileDTO;
 import com.qaelum.dms.commons.dto.QualityChapterDTO;
 import com.qaelum.dms.commons.dto.QualityQuestionDTO;
 import com.qaelum.dms.commons.dto.QuestionAnswerDTO;
@@ -31,17 +32,24 @@ public class CoachChapterPresenter implements ICoachChapterView.CoachChapterView
     }
 
     @Override
-    public void saveQuestion(QualityQuestionDTO questionDTO) {
-        //TODO save questionDTO to MODEL
+    public void saveQuestionAnswer(QualityQuestionDTO questionDTO) {
         coachProjectDAO.saveQuestionAnswer(questionDTO);
     }
 
     @Override
-    public void saveAllQuestions(QualityChapterDTO chapterDTO) {
-        //TODO save questionDTO to MODEL
+    public void saveAllQuestionAnswer(QualityChapterDTO chapterDTO) {
         for (QualityQuestionDTO questionDTO : chapterDTO.getQuestionDTOs()) {
             coachProjectDAO.saveQuestionAnswer(questionDTO);
         }
     }
 
+    @Override
+    public void saveQuestionProof(QualityQuestionDTO questionDTO) {
+        //TODO save questionDTO to MODEL
+    }
+
+    @Override
+    public void detachQuestionProof(QualityQuestionDTO questionDTO, IDmsFileDTO fileDTO) {
+        coachProjectDAO.detachProof(questionDTO, fileDTO);
+    }
 }

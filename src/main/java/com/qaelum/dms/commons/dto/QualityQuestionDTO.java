@@ -3,6 +3,7 @@ package com.qaelum.dms.commons.dto;
 import com.qaelum.dms.domain.entity.coach.qualityItem.QualityQuestion;
 
 import java.util.List;
+import java.util.stream.Collectors;
 
 /**
  * Created by Einhart on 2/15/2018.
@@ -78,6 +79,11 @@ public class QualityQuestionDTO {
 
     public List<IDmsFileDTO> getProofList() {
         return proofList;
+    }
+
+    public List<IDmsFileDTO> copyProofList() {
+        List<IDmsFileDTO> copy = proofList.stream().collect(Collectors.toList());
+        return copy;
     }
 
     public void setProofList(List<IDmsFileDTO> proofList) {

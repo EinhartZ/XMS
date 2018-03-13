@@ -18,9 +18,15 @@ public class DmsView extends VerticalLayout implements View {
         viewManager = new ViewManager();
 
         VerticalLayout splitView = new SplitView(viewManager);
-        addComponent(splitView);
-    }
+        splitView.setSizeFull();
+        splitView.setMargin(false);
 
+        addComponent(splitView);
+
+        this.setWidth("100%");
+        this.setHeightUndefined();
+        this.setMargin(false);
+    }
 
 
     @Override

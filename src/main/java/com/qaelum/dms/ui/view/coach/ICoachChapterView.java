@@ -1,5 +1,6 @@
 package com.qaelum.dms.ui.view.coach;
 
+import com.qaelum.dms.commons.dto.IDmsFileDTO;
 import com.qaelum.dms.commons.dto.QualityChapterDTO;
 import com.qaelum.dms.commons.dto.QualityQuestionDTO;
 import com.qaelum.dms.commons.dto.QuestionAnswerDTO;
@@ -22,13 +23,22 @@ public interface ICoachChapterView {
      */
     interface CoachChapterViewListener {
         void buttonClick(String value);
-        default void saveQuestion(QualityQuestionDTO questionDTO) {
+        default void saveQuestionAnswer(QualityQuestionDTO questionDTO) {
             //NOP
-        };
-        void saveAllQuestions(QualityChapterDTO chapterDTO);
+        }
+
+        void saveAllQuestionAnswer(QualityChapterDTO chapterDTO);
+
+        default void saveQuestionProof(QualityQuestionDTO questionDTO) {
+            //NOP
+        }
+
+        default void detachQuestionProof(QualityQuestionDTO questionDTO, IDmsFileDTO fileDTO) {
+            //NOP
+        }
 
         default void selectQuestion(QualityQuestionDTO questionDTO) {
             //NOP
-        };
+        }
     }
 }

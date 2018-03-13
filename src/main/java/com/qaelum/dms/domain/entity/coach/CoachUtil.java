@@ -11,8 +11,8 @@ import java.io.File;
  * Created by einha on 2/20/2018.
  */
 public class CoachUtil {
-//    private static String ROOT = "C:\\qaelum\\QC3\\qms\\qualitycoach";
-    private static String ROOT = System.getProperty("user.home") + File.separator + "qualitycoach";
+    private static String ROOT = "C:\\qaelum\\QC3\\qms\\qualitycoach";
+    private static String ROOT_LOCAL = System.getProperty("user.home") + File.separator + "qualitycoach";
 
     private static String RESOURCES_FOLDER = "resources";
     private static String DATA_FOLDER = "data";
@@ -50,8 +50,13 @@ public class CoachUtil {
         }
     }
 
-    public static String getROOT() {
-        return ROOT;
+    public static String getROOT()
+    {
+        if(System.getProperty("os.name").startsWith("Windows")) {
+            return ROOT;
+        } else {
+            return ROOT_LOCAL;
+        }
     }
 
     public static String getResourcesFolder() {

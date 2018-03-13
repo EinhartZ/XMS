@@ -35,10 +35,21 @@ public class QualityChapterView extends VerticalLayout implements ICoachChapterV
         initView();
         refreshView();
 
-        addComponent(new Label(title));
+//        addComponent(new Label(title));
         addComponent(label);
+        setExpandRatio(label, 1);
         addComponent(btnSave);
-        addComponent(accQuestions);
+        setExpandRatio(btnSave, 1);
+
+
+        VerticalLayout verticalLayout = new VerticalLayout(accQuestions);
+        verticalLayout.setMargin(false);
+
+        Panel panel = new Panel(verticalLayout);
+        panel.setHeight("700px");
+
+        addComponent(panel);
+        setExpandRatio(panel, 8);
     }
 
     private void initView() {
@@ -54,6 +65,8 @@ public class QualityChapterView extends VerticalLayout implements ICoachChapterV
                 }
             }
         });
+
+        accQuestions.setSizeFull();
     }
 
     /**
@@ -89,16 +102,27 @@ public class QualityChapterView extends VerticalLayout implements ICoachChapterV
         if (chapterDTO == null) return;
         questionViewMap.values().forEach(QualityQuestionView::syncDTO);
         for (CoachChapterViewListener listener : listeners) {
-            listener.saveAllQuestions(chapterDTO);
+            listener.saveAllQuestionAnswer(chapterDTO);
         }
     }
 
-    void saveQuestion(QualityQuestionDTO questionDTO) {
+    void saveQuestionAnswer(QualityQuestionDTO questionDTO) {
         for (CoachChapterViewListener listener : listeners) {
-            listener.saveQuestion(questionDTO);
+            listener.saveQuestionAnswer(questionDTO);
         }
     }
 
+    void saveQuestionProof(QualityQuestionDTO questionDTO) {
+        for (CoachChapterViewListener listener : listeners) {
+            listener.saveQuestionProof(questionDTO);
+        }
+    }
+
+    void detachQuestionProof(QualityQuestionDTO questionDTO, IDmsFileDTO fileDTO) {
+        for (CoachChapterViewListener listener : listeners) {
+            listener.detachQuestionProof(questionDTO, fileDTO);
+        }
+    }
     /*
     Interface methods
      */
@@ -133,6 +157,8 @@ class QualityQuestionView extends VerticalLayout {
 
     private QualityChapterView coachChapterView;
     private QualityQuestionDTO questionDTO;
+    private List<IDmsFileDTO> tempProofList;
+    private boolean proofListDirty = false;
 
     private Label keyLbl = new Label();
     private Label nameLbl = new Label();
@@ -144,27 +170,43 @@ class QualityQuestionView extends VerticalLayout {
     private Button btnReset = new Button(VaadinIcons.ARROW_BACKWARD);
     private Button btnSave = new Button(VaadinIcons.CLOUD_UPLOAD_O);
 
-    private Layout loProofs = new VerticalLayout();
+    private VerticalLayout vlProofs = new VerticalLayout();
+    private HorizontalLayout hlButtons = new HorizontalLayout();
 
     public QualityQuestionView(QualityChapterView coachChapterView, QualityQuestionDTO questionDTO) {
         this.coachChapterView = coachChapterView;
         this.questionDTO = questionDTO;
+        this.tempProofList = questionDTO.copyProofList();
+
         initView();
 
         addComponent(nameLbl);
         addComponent(textArea);
 
-        addComponent(btnReset);
-        addComponent(btnSave);
+        addComponent(hlButtons);
+        setComponentAlignment(hlButtons, Alignment.MIDDLE_RIGHT);
 
-        addComponent(loProofs);
+        addComponent(vlProofs);
+        setComponentAlignment(vlProofs, Alignment.MIDDLE_CENTER);
+
         showProofs();
-//        updateView();
+        updateView();
     }
 
     private void initView() {
         keyLbl.setValue(questionDTO.getKey());
         nameLbl.setValue(questionDTO.getName());
+
+//        hlButtons.setSizeFull();
+        hlButtons.setMargin(false);
+        hlButtons.addComponent(btnReset);
+//        hlButtons.setComponentAlignment(btnReset, Alignment.MIDDLE_CENTER);
+        hlButtons.addComponent(btnSave);
+//        hlButtons.setComponentAlignment(btnSave, Alignment.MIDDLE_CENTER);
+
+        textArea.setSizeFull();
+        vlProofs.setSizeFull();
+        vlProofs.setMargin(false);
 
         answerDTOBinder.bind(textArea, QuestionAnswerDTO::getAnswerTxt, QuestionAnswerDTO::setAnswerTxt);
         answerDTOBinder.readBean(questionDTO.getAnswerDTO());
@@ -179,16 +221,39 @@ class QualityQuestionView extends VerticalLayout {
         });
 
         btnSave.addClickListener(clickEvent -> {
-            saveQuestion();
+            saveQuestionAnswer();
             updateView();
         });
     }
 
     private void showProofs() {
-        loProofs.removeAllComponents();
-        for(IDmsFileDTO fileDTO : questionDTO.getProofList()) {
-            loProofs.addComponent(new Label(fileDTO.getFilePath()));
+        vlProofs.removeAllComponents();
+        for(IDmsFileDTO fileDTO : tempProofList) {
+            HorizontalLayout hlProof = new HorizontalLayout();
+
+            hlProof.addComponent(new Button(VaadinIcons.MINUS_CIRCLE, clickEvent -> {
+                //TODO manipulate real proof list ?!
+                tempProofList.remove(fileDTO);
+
+//                proofListDirty = true;
+//                saveQuestionProofs();
+
+                detachQuestionProof(fileDTO);
+                vlProofs.removeComponent(hlProof);
+            }));
+            hlProof.addComponent(new Label(fileDTO.getFilePath()));
+
+            vlProofs.addComponent(hlProof);
         }
+    }
+
+    private void detachQuestionProof(IDmsFileDTO fileDTO) {
+        coachChapterView.detachQuestionProof(questionDTO, fileDTO);
+    }
+
+    private void saveQuestionProofs() {
+        questionDTO.setProofList(tempProofList);
+        coachChapterView.saveQuestionProof(questionDTO);
     }
 
     private void updateView() {
@@ -196,9 +261,9 @@ class QualityQuestionView extends VerticalLayout {
         btnSave.setEnabled(answerDTOBinder.hasChanges());
     }
 
-    private void saveQuestion() {
+    private void saveQuestionAnswer() {
         syncDTO();
-        coachChapterView.saveQuestion(questionDTO);
+        coachChapterView.saveQuestionAnswer(questionDTO);
     }
 
     public void syncDTO() {

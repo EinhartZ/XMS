@@ -78,7 +78,7 @@ public class TreeChapterPresenter implements ICoachTreeView.CoachTreeViewListene
     }
 
     @Override
-    public void saveAllQuestions(QualityChapterDTO chapterDTO) {
+    public void saveAllQuestionAnswer(QualityChapterDTO chapterDTO) {
         //NOP
     }
 
