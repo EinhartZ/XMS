@@ -24,7 +24,7 @@ public class SplitRightView extends VerticalLayout {
         setExpandRatio(menuBar, 1);
 
         activeView = new VerticalLayout();
-        navigateTo(viewManager.getCoachChapterView());
+        navigateTo(viewManager.getS3TreeView());
     }
 
     private void initNavigation() {

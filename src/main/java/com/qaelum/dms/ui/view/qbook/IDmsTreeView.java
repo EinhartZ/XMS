@@ -13,6 +13,8 @@ public interface IDmsTreeView {
 
     void addListener(DmsTreeViewListener listener);
 
+    void showMsg(String msg);
+
     interface DmsTreeViewListener {
         default void attachProof(IDmsFileDTO fileDTO) {
             //NOP
@@ -21,9 +23,10 @@ public interface IDmsTreeView {
             //NOP
         };
 
-        default void addFolder(String filePath) {
+        default void createFile(String filePath) {
             //NOP
-        };
+        }
+
         default void removeFolder(String filePath) {
             //NOP
         };

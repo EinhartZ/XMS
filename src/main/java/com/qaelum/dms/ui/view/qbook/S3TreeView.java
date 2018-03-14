@@ -5,11 +5,8 @@ import com.amazonaws.services.s3.model.ListObjectsV2Request;
 import com.amazonaws.services.s3.model.ListObjectsV2Result;
 import com.amazonaws.services.s3.model.S3ObjectSummary;
 import com.qaelum.dms.commons.dto.S3FileDTO;
-import com.qaelum.dms.domain.dao.S3DAO;
 import com.qaelum.dms.ui.model.qbook.S3TreeDataProvider;
-import com.qaelum.dms.ui.presenter.qbook.DmsTreePresenter;
 import com.vaadin.contextmenu.ContextMenu;
-import com.vaadin.contextmenu.Menu;
 import com.vaadin.contextmenu.MenuItem;
 import com.vaadin.icons.VaadinIcons;
 import com.vaadin.server.Page;
@@ -54,14 +51,14 @@ public class S3TreeView extends VerticalLayout implements IDmsTreeView{
 
         s3Tree.setItemIconGenerator(item -> {
             if(item.isFolder()) {
-                return VaadinIcons.FOLDER;
+                return VaadinIcons.FOLDER_O;
             }
 
             switch (item.getExtension()) {
                 case "txt":
                     return VaadinIcons.FILE_FONT;
                 case "xml":
-                    return VaadinIcons.FILE_CODE;
+                    return VaadinIcons.FILE_O;
                 case "pdf":
                     return VaadinIcons.FILE_FONT;
                 default:
@@ -102,34 +99,26 @@ public class S3TreeView extends VerticalLayout implements IDmsTreeView{
         if(item != null) {
             s3Tree.select(item);
 
-            event.getContextMenu().addItem("View", VaadinIcons.EYE, menuItem -> {
-                openWikiPopup(item);
-            });
-            event.getContextMenu().addItem("Attach", VaadinIcons.PUZZLE_PIECE, menuItem -> {
-                for (DmsTreeViewListener listener : listeners) {
-                    listener.attachProof(item);
-                }
-            });
-
-
-            event.getContextMenu().addSeparator();
-            if(item.isFolder()) {
-                MenuItem addMenu = event.getContextMenu().addItem("New", VaadinIcons.NEWSPAPER, menuItem -> {
-
+            if(!item.isFolder()) {
+                event.getContextMenu().addItem("View", VaadinIcons.EYE, menuItem -> {
+                    openWikiPopup(item);
                 });
-
-                addMenu.addItem("Folder", VaadinIcons.FOLDER_ADD, menuItem -> {
-                    System.out.println("adding new folder...");
-                    for(DmsTreeViewListener listener : listeners) {
-                        listener.addFolder(item.getFilePath() + "Empty" + "/");
+                event.getContextMenu().addItem("Attach", VaadinIcons.PUZZLE_PIECE, menuItem -> {
+                    for (DmsTreeViewListener listener : listeners) {
+                        listener.attachProof(item);
                     }
-
-                    s3Tree.collapse(item);
-                    s3Tree.getDataProvider().refreshAll();
-                    s3Tree.expand(item);
                 });
-                addMenu.addItem("File", VaadinIcons.FILE_ADD, menuItem -> {
-                    System.out.println("adding new file...");
+
+                event.getContextMenu().addSeparator();
+            }
+
+            if(item.isFolder()) {
+                MenuItem add = event.getContextMenu().addItem("Create", VaadinIcons.PLUS, menuItem -> {
+                    openAddPopup(item);
+                });
+
+                MenuItem upload = event.getContextMenu().addItem("Upload", VaadinIcons.UPLOAD, menuItem -> {
+                    openUploadPopup(item);
                 });
             }
 
@@ -138,8 +127,6 @@ public class S3TreeView extends VerticalLayout implements IDmsTreeView{
                     for (DmsTreeViewListener listener : listeners) {
                         listener.removeFolderRecursive(item);
                     }
-                    System.out.println("deleting folder...");
-
                     s3Tree.getDataProvider().refreshAll();
                 });
 /*
@@ -152,8 +139,6 @@ public class S3TreeView extends VerticalLayout implements IDmsTreeView{
                     for (DmsTreeViewListener listener : listeners) {
                         listener.removeFile(item.getFilePath());
                     }
-                    System.out.println("deleting file...");
-
                     s3Tree.getDataProvider().refreshAll();
                 });
             }
@@ -165,12 +150,40 @@ public class S3TreeView extends VerticalLayout implements IDmsTreeView{
         }
     }
 
-    public void openWikiPopup(S3FileDTO s3FileDTO) {
+    private void openAddPopup(S3FileDTO fileDTO) {
+        if(!fileDTO.isFolder()) return;
+        CreateFileSub sub = new CreateFileSub(this, fileDTO);
+        UI.getCurrent().addWindow(sub);
+    }
+
+    void createFile(S3FileDTO item, String fileName) {
+        for(DmsTreeViewListener listener : listeners) {
+            listener.createFile(item.getFilePath() + fileName);
+        }
+        s3Tree.getDataProvider().refreshAll();
+        s3Tree.collapse(item);
+        s3Tree.expand(item);
+    }
+
+    private void openUploadPopup(S3FileDTO fileDTO) {
+        if(!fileDTO.isFolder()) return;
+        UploadFileSub sub = new UploadFileSub(this, fileDTO);
+        UI.getCurrent().addWindow(sub);
+    }
+
+    void uploadNewFile(S3FileDTO item, String fileName) {
+        for(DmsTreeViewListener listener : listeners) {
+            listener.createFile(item.getFilePath() + fileName);
+        }
+        s3Tree.getDataProvider().refreshAll();
+        s3Tree.collapse(item);
+        s3Tree.expand(item);
+    }
+
+    private void openWikiPopup(S3FileDTO s3FileDTO) {
         if(s3FileDTO.isFolder()) return;
 
         if(!s3FileDTO.getExtension().equals("xml")) return;
-
-        WikiSub sub = new WikiSub(s3FileDTO);
 
         if(wikiSubWindows.size() >= maxSubWindows) {
             String msg = maxSubWindows + " is too many windows";
@@ -181,6 +194,8 @@ public class S3TreeView extends VerticalLayout implements IDmsTreeView{
             notification.show(Page.getCurrent());
             return;
         }
+
+        WikiSub sub = new WikiSub(s3FileDTO);
 
         if(!wikiSubWindows.containsKey(s3FileDTO.getFilePath())) {
             wikiSubWindows.put(s3FileDTO.getFilePath(), sub);
@@ -222,5 +237,10 @@ public class S3TreeView extends VerticalLayout implements IDmsTreeView{
     @Override
     public void addListener(DmsTreeViewListener listener) {
         listeners.add(listener);
+    }
+
+    @Override
+    public void showMsg(String msg) {
+        Notification.show("I'm a message and I approve the following message: \n" + msg);
     }
 }

@@ -13,6 +13,8 @@ import java.util.List;
  */
 public interface IDmsFileDAO {
 
+    boolean fileExist(String filePath);
+
     boolean hasChildren(String schema, S3FileDTO s3FileDTO);
 
     Collection<S3FileDTO> findChildrenFiles(String schema, S3FileDTO s3FileDTO);
@@ -23,7 +25,7 @@ public interface IDmsFileDAO {
 
     void writeWikiContent(String schema, S3FileDTO s3FileDTO, String content);
 
-    void addFolder(String filePath);
+    void createFile(String filePath);
 
     void removeFolder(String filePath);
 
@@ -32,4 +34,6 @@ public interface IDmsFileDAO {
     void removeFolderRecursive(S3FileDTO s3fileDTO);
 
     void removeFolderRecursive(String filePath);
+
+    void uploadFile(String filePath, String localPath);
 }

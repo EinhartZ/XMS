@@ -8,6 +8,7 @@ public class WikiSub extends Window {
     public WikiSub(S3FileDTO wikiDTO) {
         super(wikiDTO.getFileName());
         center();
+        setSizeFull();
 
         WikiView wikiView = new WikiView(wikiDTO);
         WikiViewPresenter wikiViewPresenter = new WikiViewPresenter(wikiView);
