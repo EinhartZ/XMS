@@ -1,8 +1,10 @@
 package com.qaelum.dms.domain.dao;
 
+import com.amazonaws.services.s3.transfer.Upload;
 import com.qaelum.dms.commons.dto.S3FileDTO;
 
 import java.io.IOException;
+import java.io.InputStream;
 import java.nio.charset.Charset;
 import java.util.Collection;
 import java.util.List;
@@ -35,5 +37,5 @@ public interface IDmsFileDAO {
 
     void removeFolderRecursive(String filePath);
 
-    void uploadFile(String filePath, String localPath);
+    Upload uploadFileAsync(String filePath, InputStream inputStream);
 }

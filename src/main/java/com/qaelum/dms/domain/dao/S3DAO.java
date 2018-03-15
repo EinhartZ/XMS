@@ -5,6 +5,9 @@ import com.amazonaws.AmazonServiceException;
 import com.amazonaws.services.s3.AmazonS3;
 import com.amazonaws.services.s3.AmazonS3ClientBuilder;
 import com.amazonaws.services.s3.model.*;
+import com.amazonaws.services.s3.transfer.TransferManager;
+import com.amazonaws.services.s3.transfer.TransferManagerBuilder;
+import com.amazonaws.services.s3.transfer.Upload;
 import com.amazonaws.util.IOUtils;
 import com.qaelum.dms.commons.dto.S3FileDTO;
 
@@ -110,13 +113,10 @@ public class S3DAO implements IDmsFileDAO{
             }
         } catch (AmazonServiceException e) {
             System.err.println(e.getErrorMessage());
-            System.exit(1);
         } catch (FileNotFoundException e) {
             System.err.println(e.getMessage());
-            System.exit(1);
         } catch (IOException e) {
             System.err.println(e.getMessage());
-            System.exit(1);
         }
         return stringBuilder.toString();
     }
@@ -167,7 +167,7 @@ public class S3DAO implements IDmsFileDAO{
         createFile(BUCKET_NAME, filePath, s3);
     }
 
-    private void createFile(String bucketName, String folderName, AmazonS3 client) {
+    private void createFile(String bucketName, String filePath, AmazonS3 client) {
         // create meta-data for your folder and set content-length to 0
         ObjectMetadata metadata = new ObjectMetadata();
         metadata.setContentLength(0);
@@ -175,7 +175,7 @@ public class S3DAO implements IDmsFileDAO{
         InputStream emptyContent = new ByteArrayInputStream(new byte[0]);
         // create a PutObjectRequest passing the folder name suffixed by /
         PutObjectRequest putObjectRequest = new PutObjectRequest(bucketName,
-                folderName, emptyContent, metadata);
+                filePath, emptyContent, metadata);
         // send request to S3 to create folder
         client.putObject(putObjectRequest);
     }
@@ -204,31 +204,21 @@ public class S3DAO implements IDmsFileDAO{
         removeFile(filePath);
     }
 
-    @Override
-    public void uploadFile(String filePath, String localPath) {
-        try {
-            System.out.println("Uploading a new object to S3 from a file\n");
-            File file = new File(localPath);
-            s3.putObject(new PutObjectRequest(
-                    BUCKET_NAME, filePath, file));
 
-        } catch (AmazonServiceException ase) {
-            System.out.println("Caught an AmazonServiceException, which " +
-                    "means your request made it " +
-                    "to Amazon S3, but was rejected with an error response" +
-                    " for some reason.");
-            System.out.println("Error Message:    " + ase.getMessage());
-            System.out.println("HTTP Status Code: " + ase.getStatusCode());
-            System.out.println("AWS Error Code:   " + ase.getErrorCode());
-            System.out.println("Error Type:       " + ase.getErrorType());
-            System.out.println("Request ID:       " + ase.getRequestId());
-        } catch (AmazonClientException ace) {
-            System.out.println("Caught an AmazonClientException, which " +
-                    "means the client encountered " +
-                    "an internal error while trying to " +
-                    "communicate with S3, " +
-                    "such as not being able to access the network.");
-            System.out.println("Error Message: " + ace.getMessage());
+    @Override
+    public Upload uploadFileAsync(String filePath, InputStream inputStream) {
+        Upload xfer = null;
+        TransferManager xfer_mgr = TransferManagerBuilder.standard().build();
+        try {
+//            xfer = xfer_mgr.upload(BUCKET_NAME, filePath, file);
+            xfer = xfer_mgr.upload(new PutObjectRequest(BUCKET_NAME, filePath, inputStream, new ObjectMetadata()));
+            XferMgrProgress.showTransferProgress(xfer);
+            XferMgrProgress.waitForCompletion(xfer);
+
+        } catch (AmazonServiceException e) {
+            System.err.println(e.getErrorMessage());
         }
+
+        return xfer;
     }
 }
