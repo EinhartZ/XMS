@@ -40,6 +40,7 @@ public class TreeChapterPresenter implements ICoachTreeView.CoachTreeViewListene
         QualityChapter selectedChapter = null;
         QualityQuestion selectedQuestion = null;
 
+        //TODO local buffer ChapterDTO and QuestionDTO
         QualityChapterDTO selectedChapterDTO = null;
         QualityQuestionDTO selectedQuestionDTO = null;
 

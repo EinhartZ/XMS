@@ -27,10 +27,7 @@ public interface IDmsTreeView {
             //NOP
         }
 
-        default void removeFolder(String filePath) {
-            //NOP
-        };
-        default void removeFile(String filePath) {
+        default void removeFile(S3FileDTO s3FileDTO) {
             //NOP
         };
 

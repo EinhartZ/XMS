@@ -24,12 +24,13 @@ import java.util.List;
 public class CoachTreeView extends VerticalLayout implements ICoachTreeView{
 
     private String title = "CoachTreeView";
+    private ProtocolScheme protocolScheme;
+    private CoachProtocol coachProtocol;
 
     private static final String COL_TXT = "COL_TXT";
     private static final String COL_PROG = "COL_PROG";
     private static final String COL_KEY = "COL_KEY";
 
-    private CoachProtocol coachProtocol;
     private TreeGrid<AbstractQualityItem> treeGrid;
     private TreeData<AbstractQualityItem> data;
     private TreeDataProvider<AbstractQualityItem> dataProvider;
@@ -38,8 +39,8 @@ public class CoachTreeView extends VerticalLayout implements ICoachTreeView{
 
     //TODO testing only
     public CoachTreeView() {
-        ProtocolScheme protocolScheme = new ProtocolScheme("QUAADRIL", 2014, "en_US");
-        CoachProtocol coachProtocol = new CoachProtocol(protocolScheme);
+        protocolScheme = new ProtocolScheme("QUAADRIL", 2014, "en_US");
+        coachProtocol = new CoachProtocol(protocolScheme);
 
         this.coachProtocol = coachProtocol;
 //        addComponent(new Label(title));
@@ -69,14 +70,14 @@ public class CoachTreeView extends VerticalLayout implements ICoachTreeView{
 
 //        treeGrid.setItems(coachProtocol.getProtocolTree(), AbstractQualityItem::getItemChildren);
 
-        treeGrid.addColumn(AbstractQualityItem::getItemName).setId(COL_TXT);
+        treeGrid.addColumn(AbstractQualityItem::getItemName).setId(COL_TXT).setCaption(protocolScheme.getProtocolKey());
         treeGrid.addColumn(qualityItem -> {return Math.random();}, new ProgressBarRenderer()).setId(COL_PROG);
         treeGrid.addColumn(AbstractQualityItem::getItemKey).setId(COL_KEY);
 
         setColumnFiltering();
 
         treeGrid.addItemClickListener(itemClick -> {
-           clickItem(itemClick.getItem());
+           selectItem(itemClick.getItem());
         });
 
     }
@@ -111,7 +112,7 @@ public class CoachTreeView extends VerticalLayout implements ICoachTreeView{
 
     }
 
-    private void clickItem(AbstractQualityItem qualityItem) {
+    private void selectItem(AbstractQualityItem qualityItem) {
         for (CoachTreeViewListener listener : listeners) {
             listener.selectItem(qualityItem);
         }

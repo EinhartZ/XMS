@@ -29,13 +29,8 @@ public class DmsTreePresenter implements IDmsTreeView.DmsTreeViewListener {
     }
 
     @Override
-    public void removeFolder(String filePath) {
-        dmsFileDAO.removeFolder(filePath);
-    }
-
-    @Override
-    public void removeFile(String filePath) {
-        dmsFileDAO.removeFile(filePath);
+    public void removeFile(S3FileDTO s3FileDTO) {
+        dmsFileDAO.removeFile(s3FileDTO);
     }
 
     @Override

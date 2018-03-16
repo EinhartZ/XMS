@@ -137,7 +137,7 @@ public class S3TreeView extends VerticalLayout implements IDmsTreeView{
             } else {
                 event.getContextMenu().addItem("Delete", VaadinIcons.FILE_REMOVE, menuItem -> {
                     for (DmsTreeViewListener listener : listeners) {
-                        listener.removeFile(item.getFilePath());
+                        listener.removeFile(item);
                     }
                     s3Tree.getDataProvider().refreshAll();
                 });

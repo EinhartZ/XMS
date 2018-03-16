@@ -180,23 +180,21 @@ public class S3DAO implements IDmsFileDAO{
         client.putObject(putObjectRequest);
     }
 
-    @Override
-    public void removeFolder(String filePath) {
 
+    @Override
+    public void removeFile(S3FileDTO s3FileDTO) {
+        removeFile(s3FileDTO.getFilePath());
     }
 
-    @Override
-    public void removeFile(String filePath) {
+    private void removeFile(String filePath) {
         s3.deleteObject(BUCKET_NAME, filePath);
     }
 
-    @Override
     public void removeFolderRecursive(S3FileDTO s3fileDTO) {
         removeFolderRecursive(s3fileDTO.getFilePath());
     }
 
-    @Override
-    public void removeFolderRecursive(String filePath) {
+    private void removeFolderRecursive(String filePath) {
         for(S3FileDTO childFile : findChildren(filePath)) {
            removeFolderRecursive(childFile.getFilePath());
         }

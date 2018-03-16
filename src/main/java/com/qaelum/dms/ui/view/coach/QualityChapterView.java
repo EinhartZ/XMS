@@ -142,11 +142,6 @@ public class QualityChapterView extends VerticalLayout implements ICoachChapterV
     }
 
     @Override
-    public void loadQuestionAnswer(QualityQuestionDTO questionDTO, QuestionAnswerDTO answerDTO) {
-
-    }
-
-    @Override
     public void addListener(CoachChapterViewListener listener) {
         listeners.add(listener);
     }

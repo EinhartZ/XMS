@@ -29,13 +29,11 @@ public interface IDmsFileDAO {
 
     void createFile(String filePath);
 
-    void removeFolder(String filePath);
-
-    void removeFile(String filePath);
+    void removeFile(S3FileDTO s3FileDTO);
 
     void removeFolderRecursive(S3FileDTO s3fileDTO);
 
-    void removeFolderRecursive(String filePath);
+//    void removeFolderRecursive(String filePath);
 
     Upload uploadFileAsync(String filePath, InputStream inputStream);
 }

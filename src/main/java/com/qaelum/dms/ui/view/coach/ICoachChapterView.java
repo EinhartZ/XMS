@@ -14,8 +14,6 @@ public interface ICoachChapterView {
 
     void updateLabel(String value);
 
-    void loadQuestionAnswer(QualityQuestionDTO questionDTO, QuestionAnswerDTO answerDTO);
-
     void addListener(CoachChapterViewListener listener);
 
     /**

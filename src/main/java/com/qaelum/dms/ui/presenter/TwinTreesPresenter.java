@@ -12,13 +12,13 @@ import java.util.List;
  * Created by Einhart on 3/7/2018.
  * © QAELUM NV
  */
-public class TreesPresenter implements IDmsTreeView.DmsTreeViewListener {
+public class TwinTreesPresenter implements IDmsTreeView.DmsTreeViewListener {
 
     private IDmsTreeView dmsTreeView;
     private ICoachTreeView coachTreeView;
     private ICoachProjectDAO coachProjectDAO;
 
-    public TreesPresenter(IDmsTreeView dmsTreeView, ICoachTreeView coachTreeView, ICoachProjectDAO coachProjectDAO) {
+    public TwinTreesPresenter(IDmsTreeView dmsTreeView, ICoachTreeView coachTreeView, ICoachProjectDAO coachProjectDAO) {
         this.dmsTreeView = dmsTreeView;
         this.coachTreeView = coachTreeView;
 

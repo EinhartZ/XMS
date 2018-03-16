@@ -4,13 +4,11 @@ import com.qaelum.dms.domain.dao.CoachProjectDAO;
 import com.qaelum.dms.domain.dao.ICoachProjectDAO;
 import com.qaelum.dms.domain.dao.IDmsFileDAO;
 import com.qaelum.dms.domain.dao.S3DAO;
-import com.qaelum.dms.ui.model.coach.CoachChapterModel;
-import com.qaelum.dms.ui.presenter.TreesPresenter;
+import com.qaelum.dms.ui.presenter.TwinTreesPresenter;
 import com.qaelum.dms.ui.presenter.coach.CoachChapterPresenter;
 import com.qaelum.dms.ui.presenter.coach.TreeChapterPresenter;
 import com.qaelum.dms.ui.presenter.qbook.DmsTreePresenter;
 import com.qaelum.dms.ui.view.coach.*;
-import com.qaelum.dms.ui.view.qbook.IDmsTreeView;
 import com.qaelum.dms.ui.view.qbook.S3TreeView;
 import com.qaelum.dms.ui.view.qbook.TestTreeView;
 import com.qaelum.dms.ui.view.qbook.WikiSub;
@@ -60,7 +58,7 @@ public class ViewManager {
         CoachChapterPresenter chapterPresenter = new CoachChapterPresenter(coachChapterView, coachProjectDAO);
 
         //link DMSTree to
-        TreesPresenter treesPresenter = new TreesPresenter(s3TreeView, coachTreeView, coachProjectDAO);
+        TwinTreesPresenter twinTreesPresenter = new TwinTreesPresenter(s3TreeView, coachTreeView, coachProjectDAO);
 
         //link DmsTree to Model
         IDmsFileDAO dmsFileDAO = S3DAO.getInstance();
